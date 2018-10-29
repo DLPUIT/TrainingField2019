@@ -1,3 +1,5 @@
+D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csprojResolveAssemblyReference.cache
+D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csproj.CoreCompileInputs.cache
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\bin\Debug\Config\mongodb.config
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\bin\Debug\Config\redis.config
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\bin\Debug\StudentManagement.exe.config
@@ -118,9 +120,7 @@ D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\bin\
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\bin\Debug\MongoDB.Driver.Core.xml
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\bin\Debug\Newtonsoft.Json.xml
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\bin\Debug\StackExchange.Redis.StrongName.xml
-D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csprojResolveAssemblyReference.cache
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\obj\Debug\StudentManagement.exe.config
-D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csproj.CoreCompileInputs.cache
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csproj.CopyComplete
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\obj\Debug\StudentManagement.exe
 D:\Code\TrainingField2019\162CS_LuGuiAn\StudentManagement\StudentManagement\obj\Debug\StudentManagement.pdb
