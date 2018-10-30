@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiannaeConsoleAppOne
+namespace XuelingConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("dn");
         }
     }
 }
