@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AboutWatch.Watch
 {
-    class SolarWatch
+    public abstract class SolarWatch : Watch
     {
     }
 }

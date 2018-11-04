@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AboutWatch.Interface
 {
-    class ICalDay
+    public interface ICalDay
     {
+        void CalDayAfterN();
     }
 }

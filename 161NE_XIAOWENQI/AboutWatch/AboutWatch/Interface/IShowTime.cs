@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AboutWatch.Interface
 {
-    class IShowTime
+    public interface IShowTime
     {
+        void ShowTime();
     }
 }

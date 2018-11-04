@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace AboutWatch.Interface
 {
-    class IStopWatch
+     public interface IStopWatch
     {
+        void StartTiming();
+        void StopTiming();
+        void ShowStopTiming();
     }
 }
