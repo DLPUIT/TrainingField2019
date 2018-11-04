@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XuelingConsoleApp1", "XuelingConsoleApp1\XuelingConsoleApp1.csproj", "{2885CF65-A3B0-4EBD-906B-DC4BE6814C9B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "luanxxusuanfa", "luanxxusuanfa\luanxxusuanfa.csproj", "{580D1A02-F86E-4616-A0B1-A649607E56CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2885CF65-A3B0-4EBD-906B-DC4BE6814C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2885CF65-A3B0-4EBD-906B-DC4BE6814C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2885CF65-A3B0-4EBD-906B-DC4BE6814C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2885CF65-A3B0-4EBD-906B-DC4BE6814C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{580D1A02-F86E-4616-A0B1-A649607E56CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580D1A02-F86E-4616-A0B1-A649607E56CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580D1A02-F86E-4616-A0B1-A649607E56CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580D1A02-F86E-4616-A0B1-A649607E56CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3573D9B8-BF3D-42DA-9EBD-0363DFC9907E}
+		SolutionGuid = {7B541A74-6B46-4911-AACB-C2FA793E4627}
 	EndGlobalSection
 EndGlobal
