@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AboutWatch.Watch
 {
-    class QuartzWatch
+    public abstract class QuartzWatch : Watch
     {
     }
 }

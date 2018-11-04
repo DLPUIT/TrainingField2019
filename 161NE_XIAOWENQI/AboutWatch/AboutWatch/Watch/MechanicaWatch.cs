@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace AboutWatch.Watch
 {
-    class MechanicaWatch
+    public abstract class MechanicalWatch : Watch, IAutomaticWinding
     {
+        public void AutomaticWinding()
+        {
+            Console.WriteLine("我正在上弦");
+        }
     }
 }
