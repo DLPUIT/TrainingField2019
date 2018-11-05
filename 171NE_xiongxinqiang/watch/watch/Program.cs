@@ -87,7 +87,7 @@ namespace watch
             Console.WriteLine("{0}/n{1}", I.UC(),I.TOMEGA());
             Console.WriteLine("{0}", C.CASIO_getday());
             Console.WriteLine("{0}", R.TISSOT());
-
+            Console.ReadKey();
         }
     }
 }
