@@ -14,7 +14,7 @@ namespace Activity_five
         }
         public void ShowTime()
         {
-            Console.WriteLine("XXXX年XX月XX日XX时XX分XX秒!");
+            Console.WriteLine(DateTime.Now.ToLongDateString().ToString() + DateTime.Now.ToLongTimeString().ToString());
         }
         public void ShowAD()
         {
