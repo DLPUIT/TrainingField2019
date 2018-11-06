@@ -6,21 +6,67 @@ using System.Threading.Tasks;
 
 namespace student.watch
 {
+    
 
-    //卡西欧手表
-    class CASIO
+    using System;
+    using System.Collections.Generic;
+    using text3;
+
+    internal class Program
     {
-        public void showAdv()
+        private static void Main(string[] args)
         {
-            Console.WriteLine("CASIO 广告显示");
-        }
-        public void countTime()
-        {
-            Console.WriteLine("CASIO 开始计时");
-        }
-        public void showTime()
-        {
-            Console.WriteLine("CASIO 显示时间");
+            Console.WriteLine("Hello, World!");
+
+            // 泛型容器
+            var list = new List<Watch>
+            {
+                new OMEGA {Name = "QiHuan's omega."},
+                new OMEGA {Name = "Qiyanan's omega."},
+                new CASIO(),
+                new TISSOT()
+            };
+
+            foreach (Watch watch in list)
+            {
+                Console.WriteLine("I'm " + watch.Name);
+
+                if (watch is ICalDay)
+                {
+                    (watch as ICalDay).CalDayAfterN();
+                }
+                if (watch is IStopWatch)
+                {
+                    (watch as IStopWatch).StartTiming();
+                    (watch as IStopWatch).StopTiming();
+                    (watch as IStopWatch).ShowStopWatch();
+                }
+            }
+
+            CASIO c1 = new CASIO();
+            Watch c2 = new CASIO();
+            CASIO c3 = c2 as CASIO;
+
+            Watch w1 = new CASIO();
+            Watch w2 = new OMEGA();
+
+            IStopWatch stopWatch = new CASIO();
+            IStopWatch stopWatch2 = new OMEGA();
+
+            foreach (var watch in list)
+            {
+                if (watch is OMEGA)
+                {
+                }
+                if (watch is CASIO)
+                {
+                }
+                if (watch is TISSOT)
+                {
+                }
+            }
+
+            Console.ReadKey(true);
         }
     }
 }
