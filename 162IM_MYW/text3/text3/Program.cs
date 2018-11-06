@@ -21,8 +21,8 @@ namespace student.watch
             // 泛型容器
             var list = new List<Watch>
             {
-                new OMEGA {Name = "QiHuan's omega."},
-                new OMEGA {Name = "Qiyanan's omega."},
+                new OMEGA {Name = "MYW's omega."},
+                new OMEGA {Name = "KKK's omega."},
                 new CASIO(),
                 new TISSOT()
             };
