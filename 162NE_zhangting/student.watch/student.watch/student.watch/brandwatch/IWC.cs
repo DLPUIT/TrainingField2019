@@ -12,14 +12,8 @@ namespace student.watch
     {
         public string Name { get; internal set; }
 
-        public void showTime()
-        {
-            Console.WriteLine("IWC 显示时间");
-        }
-        public  void showAdv()
-        {
-            Console.WriteLine("IWC 显示广告");
-        }
+    
+       
         public  void StartTiming()
         {
             Console.WriteLine("");

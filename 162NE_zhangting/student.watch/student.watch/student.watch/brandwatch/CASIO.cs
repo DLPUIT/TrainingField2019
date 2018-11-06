@@ -12,10 +12,7 @@ namespace student.watch
     //卡西欧手表
     class CASIO: SolarWatch,ICalDay,IShowAD
     {
-        public  void showAdv()
-        {
-            Console.WriteLine("CASIO 广告显示");
-        }
+        
         public void countTime()
         {
             Console.WriteLine("CASIO 开始计时");

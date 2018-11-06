@@ -9,7 +9,7 @@ using Watch;
 
 namespace student.watch
 {
-    class OMEGA:MechanicalWatch,IShowAD
+    class OMEGA:MechanicalWatch,IShowAD,IStopWatch
     {
         public string Name { get; internal set; }
 
@@ -29,6 +29,21 @@ namespace student.watch
         }
 
         public void ShowAD()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void StatTiming()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void StopTiming()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowStopTime()
         {
             throw new NotImplementedException();
         }
