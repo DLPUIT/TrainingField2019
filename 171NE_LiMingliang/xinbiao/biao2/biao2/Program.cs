@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using biao2.watch;
+using biao2.watch1;
 
 namespace biao2
 {
@@ -13,12 +15,12 @@ namespace biao2
             Console.WriteLine("1231313");
             List<Watch> list = new List<Watch>
             {
-                new CASIO {Name = "Calvert's CASIO.",ADD = "CASIO's AD"},
-                new CITIZEN {Name = "Calvert's CITIZEN.",ADD = "CITIZEN's AD"},
-                new IWC {Name = "Calvert's IWC.",ADD = "IWC's AD"},
-                new OMEGA {Name = "Calvert's OMEGA.",ADD = "OMEGA's AD"},
-                new RADO {Name = "Calvert's RADO.",ADD = "RADO's AD"},
-                new TISSOT {Name = "Calvert's TISSOT.",ADD = "TISSOT's AD"}
+                new CASIO {Name = " CASIO.",ADD = "CASIO's AD"},
+                new CITIZEN {Name = "CITIZEN.",ADD = "CITIZEN's AD"},
+                new IWC {Name = " IWC.",ADD = "IWC's AD"},
+                new OMEGA {Name = " OMEGA.",ADD = "OMEGA's AD"},
+                new RADO {Name = " RADO.",ADD = "RADO's AD"},
+                new TISSOT {Name = " TISSOT.",ADD = "TISSOT's AD"}
             };
 
             foreach (Watch watch in list)

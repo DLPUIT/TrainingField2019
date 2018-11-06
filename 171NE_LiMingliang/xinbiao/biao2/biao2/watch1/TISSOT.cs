@@ -10,17 +10,17 @@ namespace biao2.watch1
     {
         public void Starttime()
         {
-            Console.WriteLine("开始计时");
+            Console.WriteLine("start");
         }
 
         public void Stoptime()
         {
-            Console.WriteLine("停止计时");
+            Console.WriteLine("stopjishi");
         }
 
         public void Showstopwatch()
         {
-            Console.WriteLine("共计n秒");
+            Console.WriteLine("alltime");
         }
     }
 }
