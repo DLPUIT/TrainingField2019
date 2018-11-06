@@ -1,4 +1,4 @@
-﻿namespace Watch
+﻿namespace student.watch.Interface
 {
     internal interface IShowAD
     {

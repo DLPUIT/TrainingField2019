@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Watch 
+namespace student.watch.Interface
 {
     public interface  IStopWatch
     {

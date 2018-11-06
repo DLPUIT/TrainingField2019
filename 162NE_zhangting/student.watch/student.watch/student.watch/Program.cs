@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Watch;using student.watch.Interface;
+using Watch;
 
 namespace student.watch
 {
@@ -40,8 +40,8 @@ namespace student.watch
                 }
                 if (watch is Interface.IStopWatch)
                 {
-                    (watch as Interface.IStopWatch).StatTiming(),
-                     (watch as Interface.IStopWatch).StopTiming(),
+                    (watch as Interface.IStopWatch).StatTiming();
+                    (watch as Interface.IStopWatch).StopTiming();
                     (watch as Interface.IStopWatch).ShowStopTime();
                 }
 
