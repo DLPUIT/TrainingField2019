@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SquirrelFramework.Domain.Model;
+using SquirrelFramework.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -97,5 +99,21 @@ namespace IntegratingSystem
             dbhelper.Add(student);
             Console.WriteLine("成员已成功添加");
         }
+    }
+    public class DatabaseOperation : RepositoryBase<User>
+    {
+
+    }
+    [Collection("person")]
+    public class User : DomainModel
+    {
+        public string ClassId { get; set; }
+        public string ClassName { get; set; }
+        public string Name { get; set; }
+        public int Credits { get; set; }
+        public bool Gender { get; set; }
+        public string ReportTo { get; set; }
+        public string GitHub { get; set; }
+
     }
 }
