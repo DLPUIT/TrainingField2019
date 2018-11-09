@@ -1,7 +1,4 @@
-﻿
-// 欧米茄手表实类
-
-namespace Watch_ALG
+﻿namespace Watch_ALG
 {
     #region using directives
 
@@ -16,17 +13,17 @@ namespace Watch_ALG
             this.ADDescription = "Omega is the best.";
         }
 
-        public void StartTiming()               // 秒表计时功能，计时开始
+        public void StartTiming()               
         {
             throw new NotImplementedException();
         }
 
-        public void StopTiming()                // 秒表计时功能，计时结束
+        public void StopTiming()                
         {
             throw new NotImplementedException();
         }
 
-        public void ShowStopWatch()             // 秒表计时功能，显示计时时间
+        public void ShowStopWatch()             
         {
             throw new NotImplementedException();
         }

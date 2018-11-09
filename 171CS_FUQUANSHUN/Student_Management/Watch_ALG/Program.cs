@@ -12,9 +12,9 @@ namespace Watch_ALG
         private static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-
-            // 泛型容器
+            
             var list = new List<BigTotalWatch>
+                // 泛型容器
             {
                 // 内部指定
                 new OMEGA {Name = "QiHuan's omega"},
@@ -28,10 +28,12 @@ namespace Watch_ALG
             // a2.Name = "Qiyanan's omega";
 
             foreach (BigTotalWatch watch in list)
+                // 多态：遍历区分各种表，面向容器用 foreach 不用 for
             {
-                Console.WriteLine("I'm " + watch.Name);
+                Console.WriteLine("I'm " + watch.Name +  ",now I'm going to show you what I can do!");
 
                 if (watch is ICalDay)
+                    // 接口实现关系的对象替换
                 {
                     (watch as ICalDay).CalDayAfterN();
                 }

@@ -1,7 +1,4 @@
-﻿
-// 天梭手表实类
-
-namespace Watch_ALG
+﻿namespace Watch_ALG
 {
     #region using directives
 
@@ -11,17 +8,18 @@ namespace Watch_ALG
 
     public class TISSOT : QuartzWatch, IStopWatch
     {
-        public void StartTiming()                       // 秒表计时功能，计时开始
+        public void StartTiming()                       
+            
         {
             throw new NotImplementedException();
         }
 
-        public void StopTiming()                        // 秒表计时功能，计时开始
+        public void StopTiming()                        
         {
             throw new NotImplementedException();
         }
 
-        public void ShowStopWatch()                     // 秒表计时功能，计时开始
+        public void ShowStopWatch()                     
         {
             throw new NotImplementedException();
         }

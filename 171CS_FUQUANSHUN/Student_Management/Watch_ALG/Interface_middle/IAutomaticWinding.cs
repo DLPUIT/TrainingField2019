@@ -1,4 +1,7 @@
-﻿namespace Watch_ALG
+﻿
+// 接口
+
+namespace Watch_ALG
 {
     public interface IAutomaticWinding
     {
