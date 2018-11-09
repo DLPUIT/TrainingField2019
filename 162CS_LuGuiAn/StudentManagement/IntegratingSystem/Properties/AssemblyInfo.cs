@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("studentmongo")]
+[assembly: AssemblyTitle("IntegratingSystem")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("studentmongo")]
+[assembly: AssemblyProduct("IntegratingSystem")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("c5bfea5e-bd05-414e-a5db-22b4f21d99f4")]
+[assembly: Guid("56e3b674-223e-4d04-8f08-e4a8670fe83e")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
