@@ -56,5 +56,10 @@ namespace Browsers
                 this.Load();
             }
         }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

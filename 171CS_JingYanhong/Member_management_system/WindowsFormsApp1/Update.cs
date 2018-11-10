@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
         {
             
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             var name = this.textBox1.Text;
@@ -63,6 +63,21 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                var name = this.textBox1.Text;
+                User Result = this.service.FindMember(name);
+                this.textBox4.Text = Result.Name ;
+                this.textBox2.Text = Result.ClassId  ;
+                this.textBox7.Text = Result.GitHub ;
+                this.textBox5.Text = Convert.ToString(Result.Credits);
+                this.textBox3.Text = Result.ClassName; 
+                this.textBox6.Text = Result.Reportto ;
+            }
         }
     }
 }
