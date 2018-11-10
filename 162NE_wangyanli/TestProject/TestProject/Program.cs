@@ -10,7 +10,7 @@ namespace ConsoleApp2
 {
     class Program
     {
-        static void Main(string[] args)
+       static void Main(string[] args)
         {
             var somebody = new User();
             Console.WriteLine("请输入你的学号：");
