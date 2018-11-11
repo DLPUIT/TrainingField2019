@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DlpuManager.Service\DlpuManager.Service.csproj">
+      <Project>{0d56c6ae-ffd8-4392-9f17-591cefecd7f1}</Project>
+      <Name>DlpuManager.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
