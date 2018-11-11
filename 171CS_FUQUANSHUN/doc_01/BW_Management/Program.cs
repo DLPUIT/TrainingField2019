@@ -6,24 +6,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Student_Management
+namespace BW_Management
 {
-    using SquirrelFramework.Repository;                         // 导包
+    using SquirrelFramework.Repository;                         
     using SquirrelFramework.Domain.Model;
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void ShowList()
         {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+
+
+
+
+
+        private static void Main(string[] args)
+        {
+            Console.WriteLine("Black and White Student Management");
+            var userInput = Console.ReadLine();
+            switch(userInput)
+            {
+                case "a" : break;
+                case "b" : break;
+                case "c" : break;
+                case "d" : break;
+                case "e" : break;
+                case "f" : break;
+            }
+
+
+
             Console.WriteLine("Hello World!");           
-            var somebody = new User();                          // 对象实例化
+            var somebody = new User();                         
             Console.WriteLine("请输入班级ID：");
-            somebody.ClassId = Console.ReadLine();              // 光标输入
+            somebody.ClassId = Console.ReadLine();              
             Console.WriteLine("班级：");
             somebody.ClassName = Console.ReadLine();
             Console.WriteLine("姓名：");
             somebody.Name = Console.ReadLine();
             Console.WriteLine("得分：");
-            somebody.Credits = int.Parse(Console.ReadLine());   // 强制类型转换
+            somebody.Credits = int.Parse(Console.ReadLine());   
             Console.WriteLine("性别：");
             somebody.Gender = bool.Parse(Console.ReadLine());
             Console.WriteLine("汇报人：");
@@ -31,10 +63,10 @@ namespace Student_Management
             Console.WriteLine("GitHub账户：");
             somebody.GitHub = Console.ReadLine();
             var dbop = new DatabaseOperation();
-            dbop.Add(somebody);                                 // 添加对象到MongoDB
-            var allMenber = dbop.GetAll();                      // 得到所有人信息           
-            var desb = dbop.Delete("171");                      // 根据ID删除
-            var upsb = dbop.Update("171");                      // 更新
+            dbop.Add(somebody);                                
+            var allMenber = dbop.GetAll();                                 
+            var desb = dbop.Delete("171");                      
+            var upsb = dbop.Update("171");                         
             Console.ReadKey();
         }
     }
@@ -42,7 +74,7 @@ namespace Student_Management
     public class DatabaseOperation : RepositoryBase<User>       // 提供增删改查方法
     {
     }
-    [Collection("User")]                                        // 设置数据库表名
+    [Collection("BlackWhite")]                                        // 设置数据库表名
     public class User : DomainModel                             // 自定义类的继承，不过继承了什么？？？单击按F12
     {
         public string ClassId { get; set; }                     // 注意分号
