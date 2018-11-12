@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "乱序排码", "乱序排码\乱序排码.csproj", "{64CC6F34-D2E9-434B-B49B-D916920F641F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64CC6F34-D2E9-434B-B49B-D916920F641F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CC6F34-D2E9-434B-B49B-D916920F641F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CC6F34-D2E9-434B-B49B-D916920F641F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CC6F34-D2E9-434B-B49B-D916920F641F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {647A1B09-EBF5-4840-AA98-078904F61BE6}
+	EndGlobalSection
+EndGlobal

@@ -1,7 +1,7 @@
-*/.vs/*
-*/packages/*
-bin/
-obj/
+**/bin
+**/packages
+**/obj
+**/.vs
 *.bak
 *.user
 *.suo
