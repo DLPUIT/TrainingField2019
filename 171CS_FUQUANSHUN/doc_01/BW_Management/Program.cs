@@ -42,7 +42,7 @@ namespace BW_Management
     public class DatabaseOperation : RepositoryBase<User>       // 提供增删改查方法
     {
     }
-    [Collection("BlackWhite")]                                        // 设置数据库表名
+    [Collection("BlackWhite")]                                  // 设置数据库表名
     public class User : DomainModel                             // 自定义类的继承，不过继承了什么？？？单击按F12
     {
         public string ClassId { get; set; }                     // 注意分号

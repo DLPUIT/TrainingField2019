@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Student_Management
+namespace DLPU_Manager
 {
     using SquirrelFramework.Domain.Model;
+    [Collection("BlackAndWhite")]
 
-    [Collection("User")]
-
-    public class User
+    public class User : DomainModel
     {
         public string ClassId { get; set; }
         public string Name { get; set; }
@@ -18,3 +17,10 @@ namespace Student_Management
         public string GitHub { get; set; }
     }
 }
+
+
+    
+
+    
+
+

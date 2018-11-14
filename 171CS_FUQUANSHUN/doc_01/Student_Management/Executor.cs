@@ -1,6 +1,8 @@
 ﻿
 // 命令解析器、执行器
 
+using DLPU_Manager;
+using DLPU_Manager.service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +11,10 @@ using System.Threading.Tasks;
 
 namespace Student_Management
 {
-    private DatabaseOperation dbhelper = new DatabaseOperation();
-    // var 只能用在局部变量
-
-    class Executor
+    internal class Executor
     {
+        private readonly DLPU_ManageService service = new DLPU_ManageService();
+        // var 只能用在局部变量
         public void ShowHelp()
         {
             Console.WriteLine("* * * * * * * * * * * * * * * * * * * * *");
@@ -30,8 +31,8 @@ namespace Student_Management
 
         public void ShowAllMember()
         {
-            Console.WriteLine("以下是全体成员信息：");           
-            var allMember = this.dbhelper.GetAll();
+            Console.WriteLine("以下是全体成员信息：");
+            var allMember = this.service.GetAllMember();
             Console.WriteLine("班级ID\t\t姓名\t\t当前积分\t\tGitHub账号");
             //   /t 制表符 tab 键
             foreach (var user in allMember)
@@ -53,7 +54,7 @@ namespace Student_Management
             somebody.Credit = int.Parse(Console.ReadLine());
             Console.WriteLine("请输入GitHub账号：");
             somebody.GitHub = Console.ReadLine();
-            dbhelper.Add(somebody);
+            this.service.AddMember(somebody);
             Console.WriteLine("添加成功！！！");
         }
 
@@ -61,7 +62,7 @@ namespace Student_Management
         {
             Console.WriteLine("开始修改成员信息，请输入所要编辑成员姓名：");
             var name = Console.ReadLine();
-            var result = this.dbhelper.Get(x => x.Name == name);
+            var result = this.service.FindMember(name);
             if (result == null)
             {
                 Console.WriteLine($"未找到成员：{name}");
@@ -82,8 +83,7 @@ namespace Student_Management
                 result.Credit = int.Parse(Console.ReadLine());
                 Console.WriteLine("请输入GitHub账号：");
                 result.GitHub = Console.ReadLine();
-                this.dbhelper.UpdateMember(x => x.Name == name);
-                // this.service.UpdateMember(result);
+                this.service.UpdateMember(result);
                 Console.WriteLine("成员信息更新成功！！！");
 
             }
@@ -94,7 +94,7 @@ namespace Student_Management
         {
             Console.WriteLine("请输入需要删除成员姓名：");
             var name = Console.ReadLine();
-            this.dbhelper.DeleteMember(x => x.Name == name);
+            this.service.DeleteMember(name);
             // this.service.DeleteMember(name);
             Console.WriteLine("成员删除成功！！！");
         }
@@ -102,7 +102,8 @@ namespace Student_Management
         public void ShowRank()
         {
             Console.WriteLine("以下是成员积分排行：");
-            var allMember = this.dbhelper.GetAll().OrderBy(x => x.Credit);
+            var allMember = this.service.GetAllMember().OrderByDescending(x => x.Credit);
+            // OrderBy 从小到大排序   rderByDescending 从大到小排序
             Console.WriteLine("班级ID\t\t姓名\t\t当前积分");
             foreach (var user in allMember)
             {
@@ -112,7 +113,20 @@ namespace Student_Management
 
         public void FindOne()
         {
-
+            Console.WriteLine("开始查找成员信息···请输入成员姓名：");
+            var name = Console.ReadLine();
+            var result = this.service.FindMember(name);
+            if (result == null)
+            {
+                Console.WriteLine($"未找到该成员：{name}");
+            }
+            else
+            {
+                Console.WriteLine($"姓名：{result.Name}");
+                Console.WriteLine($"班级ID：{result.ClassId}");
+                Console.WriteLine($"当前积分：{result.Credit}");
+                Console.WriteLine($"GitHub账号：{result.GitHub}");
+            }
         }
 
         public void Exit()

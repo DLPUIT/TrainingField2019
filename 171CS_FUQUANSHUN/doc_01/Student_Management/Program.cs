@@ -1,6 +1,4 @@
-﻿using SquirrelFramework.Domain.Model;
-using SquirrelFramework.Repository;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace Student_Management
 {
-    using SquirrelFramework.Repository;                         // 导包
-    using SquirrelFramework.Domain.Model;
     public class Program
     {
         
