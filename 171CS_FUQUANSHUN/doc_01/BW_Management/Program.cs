@@ -12,40 +12,8 @@ namespace BW_Management
     using SquirrelFramework.Domain.Model;
     public class Program
     {
-        public static void ShowList()
-        {
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-        }
-
-
-
-
-
         private static void Main(string[] args)
         {
-            Console.WriteLine("Black and White Student Management");
-            var userInput = Console.ReadLine();
-            switch(userInput)
-            {
-                case "a" : break;
-                case "b" : break;
-                case "c" : break;
-                case "d" : break;
-                case "e" : break;
-                case "f" : break;
-            }
-
-
-
             Console.WriteLine("Hello World!");           
             var somebody = new User();                         
             Console.WriteLine("请输入班级ID：");
