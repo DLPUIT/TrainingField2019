@@ -13,12 +13,8 @@ namespace Student_Management
             Console.WriteLine("Black and White Student Management");
             Console.WriteLine();                        // 空行
            var executor = new Executor();
-            while (true)
-            {
-                executor.ShowHelp();
-                Console.Write(">>>");                   // 输出不换行
-                executor.Run();
-            }
+                executor.ShowHelp();                  
+                executor.Run();            
         }
 
 
