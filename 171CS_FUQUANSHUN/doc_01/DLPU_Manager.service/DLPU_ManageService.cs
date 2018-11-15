@@ -12,8 +12,7 @@ namespace DLPU_Manager.service
 {
     public class DLPU_ManageService
     {
-        private DatabaseOperation service = new DatabaseOperation();
-        // private DLPU_ManageService service = new DLPU_ManageService();
+        private readonly DatabaseOperation service = new DatabaseOperation();        
         public IEnumerable<User> GetAllMember()
         {
             return this.service.GetAll();

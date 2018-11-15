@@ -13,8 +13,12 @@ namespace DLPU_Manager
     {
         public string ClassId { get; set; }
         public string Name { get; set; }
-        public int Credit { get; set; }
+        public string EnglishName { get; set; }
+        public string Gender { get; set; }
+        public int Credit { get; set; }        
         public string GitHub { get; set; }
+        public string CSDN { get; set; }
+        public string Email { get; set; } 
     }
 }
 
