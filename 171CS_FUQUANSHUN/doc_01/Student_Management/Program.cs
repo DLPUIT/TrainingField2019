@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace Student_Management
 {
     public class Program
-    {
-        
-
+    {        
         private static void Main(string[] args)
         {
             Console.WriteLine("Black and White Student Management");
-            Console.WriteLine();                                // 空行
+            Console.WriteLine();                        // 空行
            var executor = new Executor();
-            executor.ShowHelp();
-            Console.WriteLine(">>>");
-            executor.Run();
-
+            while (true)
+            {
+                executor.ShowHelp();
+                Console.Write(">>>");                   // 输出不换行
+                executor.Run();
+            }
         }
 
 
