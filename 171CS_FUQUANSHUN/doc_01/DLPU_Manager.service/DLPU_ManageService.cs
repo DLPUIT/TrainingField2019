@@ -25,17 +25,17 @@ namespace DLPU_Manager.service
         {
             this.service.Update(user);
         }
-        public void DeleteMember(string name)
+        public void DeleteMember(string str)
         {
-            this.service.DeleteMany(x => x.Name == name);
+            this.service.DeleteMany(x => x.Name == str | x.Credit == int.Parse(str) | x.Gender == str | x.CSDN == str | x.GitHub == str | x.EnglishName == str);
         }
         public IOrderedEnumerable<User> GetRank()
         {
             return this.service.GetAll().OrderByDescending(x => x.Credit);
         }
-        public User FindMember(String name)
+        public User FindMember(string str)
         {
-            return this.service.Get(x => x.Name == name);
+            return this.service.Get(x => x.Name == str | x.Credit == int.Parse(str) | x.Gender == str | x.CSDN == str | x.GitHub == str | x.EnglishName == str);
         }
     }
 }

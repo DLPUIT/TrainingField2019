@@ -35,10 +35,14 @@ namespace WindowsFormsApp
         {
             var newUser = new User
             {
-                Name = this.textBox1.Text,
-                ClassId = this.textBox2.Text,
-                Credit = int.Parse(this.textBox3.Text),
-                GitHub = this.textBox4.Text
+                ClassId = this.textBox1.Text,
+                Name = this.textBox2.Text,                ,
+                EnglishName = this.textBox3.Text,
+                Gender = this.textBox4.Text,
+                Credit = int.Parse(this.textBox5.Text),
+                GitHub = this.textBox6.Text,
+                CSDN = this.textBox7.Text,
+                Email = this.textBox8.Text,                
             };
             this.Close();
         }
@@ -46,6 +50,16 @@ namespace WindowsFormsApp
         private void AddNewMember_Load(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e) 
+        {
 
         }
     }

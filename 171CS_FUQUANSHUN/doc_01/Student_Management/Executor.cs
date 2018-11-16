@@ -20,10 +20,10 @@ namespace Student_Management
             Console.WriteLine("* * * * * * * * * * * * * * *");
             Console.WriteLine("系统功能列表：");
             Console.WriteLine("A 查看所有人员信息");
-            Console.WriteLine("B 增加一位新成员");
-            Console.WriteLine("C 删除一位成员");
-            Console.WriteLine("D 修改一位成员信息");
-            Console.WriteLine("E 查找一位成员");
+            Console.WriteLine("B 增加新成员");
+            Console.WriteLine("C 删除成员");
+            Console.WriteLine("D 修改成员信息");
+            Console.WriteLine("E 查找成员");
             Console.WriteLine("F 查看积分排名");
             Console.WriteLine("G 退出程序");
             Console.WriteLine("* * * * * * * * * * * * * * *");
