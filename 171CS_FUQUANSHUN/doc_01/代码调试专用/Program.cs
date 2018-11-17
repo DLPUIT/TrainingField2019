@@ -14,13 +14,12 @@ namespace 代码调试专用
             string url = "http://www.baidu.com";
             char[] str = url.ToCharArray();
             char[] str1 = new char[7];
-            str1[0] = str[0];
-            str1[1] = str[1];
-            str1[2] = str[2];
-            str1[3] = str[3];
-            str1[4] = str[4];
-            str1[5] = str[5];
-            str1[6] = str[6];
+            foreach(var i in url)
+            {
+                str1[i] = str[i];
+                if(str1.Length == 7)
+                    break;
+            }            
             Console.WriteLine(str);
             Console.WriteLine(str1);
             string str2 = new string(str1);

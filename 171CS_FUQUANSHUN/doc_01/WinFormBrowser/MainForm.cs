@@ -40,35 +40,29 @@ namespace WinFormBrowser
         {
             if (e.KeyCode == Keys.Enter)
             {
-                var url = this.textBox.Text;    // 获取输入 
+                var url = this.textBox.Text;        // 获取输入内容 
                 char[] str = url.ToCharArray();     // 将 url 转化为字符串数组,大小写                    
-                char[] str1 = new char[7];                                
-                str1[0] = str[0];
-                str1[1] = str[1];
-                str1[2] = str[2];
-                str1[3] = str[3];
-                str1[4] = str[4];
-                str1[5] = str[5];
-                str1[6] = str[6];
-                if (str1.Length == 7)
+                char[] str1 = new char[7];
+                for (int i = 0; i < 7; i++)
                 {
-                    string str2 = new string(str1);
-                    if (str2 == "http://")
-                    {
-                        this.webBrowser1.Url = new Uri(url);
-                        this.webBrowser1.Refresh();         // 不写也可以
-                    }
-                    else
-                    {
-                        url = "http://" + url;
-                        this.webBrowser1.Url = new Uri(url);
-                        this.webBrowser1.Refresh();
-                    }
-                }
-                
-                
+                    str1[i] = str[i];
 
-                
+                    if (str1.Length == 7)
+                    {
+                        var str2 = new string(str1);
+                        if (str2 == "http://")
+                        {
+                            this.webBrowser1.Url = new Uri(url);
+                            this.webBrowser1.Refresh();         // 不写也可以
+                        }
+                        else
+                        {
+                            url = "http://" + url;
+                            this.webBrowser1.Url = new Uri(url);
+                            this.webBrowser1.Refresh();
+                        }
+                    }
+                } 
             }
         }
     }
