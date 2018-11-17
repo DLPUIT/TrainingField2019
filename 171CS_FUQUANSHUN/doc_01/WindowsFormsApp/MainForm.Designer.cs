@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp
 {
-    partial class winformManagement
+    partial class MainForm
     {
         /// <summary>
         /// 必需的设计器变量。

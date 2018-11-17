@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class winformManagement : Form
+    public partial class MainForm : Form
     {
-        public winformManagement()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -36,14 +36,15 @@ namespace WindowsFormsApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var addWinFormMember = new EditMember();
+            var addWinFormMember = new EditMember();       // 新窗口实例化
             addWinFormMember.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var editWinFormMember = dataGridView1.SelectedRows[0].Cells[1].Value as string;
-            this.service.FindMember(editWinFormMember);
+            var editWinFormMember = new EditMember();
+            editWinFormMember.Show();
+            editWinFormMember.
 
         }
 

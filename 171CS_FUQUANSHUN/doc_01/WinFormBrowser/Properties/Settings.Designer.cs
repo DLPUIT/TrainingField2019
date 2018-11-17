@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsAppBrowse.Properties
+namespace WinFormBrowser.Properties
 {
 
 
