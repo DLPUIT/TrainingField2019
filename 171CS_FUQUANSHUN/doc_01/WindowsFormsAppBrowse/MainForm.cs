@@ -18,11 +18,11 @@ namespace WindowsFormsAppBrowse
             this.webBrowser1.ScriptErrorsSuppressed = true; // 消除script error
         }
 
-        private void LoadPage() 
+        private void LoadPage()
         {
             var url = this.textBox.Text;
             this.webBrowser1.Url = new Uri(url);
-            this.webBrowser1.Refresh();           
+            this.webBrowser1.Refresh();
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -36,5 +36,6 @@ namespace WindowsFormsAppBrowse
             {
                 this.LoadPage();
             }
+        }
     }
 }

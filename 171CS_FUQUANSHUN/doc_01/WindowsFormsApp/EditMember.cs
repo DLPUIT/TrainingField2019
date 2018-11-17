@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class AddNewMember : Form
+    public partial class EditMember : Form
     {
-        public AddNewMember()
+        public EditMember()
         {
             InitializeComponent();
         }
@@ -59,6 +59,11 @@ namespace WindowsFormsApp
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e) 
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

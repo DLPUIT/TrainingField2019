@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watch_ALG", "Watch_ALG\Watc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLPU_Manager.service", "DLPU_Manager.service\DLPU_Manager.service.csproj", "{BBB9E6E8-DB57-44FE-9578-8C55F7257A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp", "WindowsFormsApp\WindowsFormsApp.csproj", "{8796D967-4512-41D6-9031-2BD0218EF567}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsManagement", "WindowsFormsApp\WindowsFormsManagement.csproj", "{8796D967-4512-41D6-9031-2BD0218EF567}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppBrowser", "WindowsFormsAppBrowse\WindowsFormsAppBrowser.csproj", "{CBDFD2EB-4468-4545-A615-31D5222F03E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsBrowser", "WindowsFormsAppBrowse\WindowsFormsBrowser.csproj", "{CBDFD2EB-4468-4545-A615-31D5222F03E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
