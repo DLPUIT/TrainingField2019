@@ -142,36 +142,43 @@ namespace Student_Management
         {
             while (true)
             {
-                Console.Write("请选择所需要的功能>>>");          // 输出不换行
-                var userInput = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(userInput))
+                try
                 {
-                    switch (userInput.Trim().ToLowerInvariant())
-                    // string 方法 trim() 作用去除输入内容前后的空格
-                    // string 方法 TolowerInvariant() 作用把大写字母全变成小写？？？大小写结合会怎样
+                    Console.Write("请选择所需要的功能>>>");          // 输出不换行
+                    var userInput = Console.ReadLine();
+                    if (!string.IsNullOrWhiteSpace(userInput))
                     {
-                        case "a":
-                            this.ShowAllMember();                           
-                            continue;       // 结束当前while循环，开始下次循环
-                        case "b":
-                            this.AddNewMember();
-                            continue;
-                        case "c":
-                            this.DeleteMember();
-                            continue;
-                        case "d":
-                            this.EditMember();
-                            continue;
-                        case "e":
-                            this.FindOne(); 
-                            continue;
-                        case "f":
-                            this.ShowRank();
-                            continue;
-                        case "g":
-                            this.Exit();
-                            continue;
+                        switch (userInput.Trim().ToLowerInvariant())
+                        // string 方法 trim() 作用去除输入内容前后的空格
+                        // string 方法 TolowerInvariant() 作用把大写字母全变成小写？？？大小写结合会怎样
+                        {
+                            case "a":
+                                this.ShowAllMember();
+                                continue;       // 结束当前while循环，开始下次循环
+                            case "b":
+                                this.AddNewMember();
+                                continue;
+                            case "c":
+                                this.DeleteMember();
+                                continue;
+                            case "d":
+                                this.EditMember();
+                                continue;
+                            case "e":
+                                this.FindOne();
+                                continue;
+                            case "f":
+                                this.ShowRank();
+                                continue;
+                            case "g":
+                                this.Exit();
+                                continue;
+                        }
                     }
+                }
+                catch(Exception troubleExcutor)
+                {
+                    Console.WriteLine($"程序发生异常，运行终止，详细信息："{troubleExcutor});
                 }
             }
         }

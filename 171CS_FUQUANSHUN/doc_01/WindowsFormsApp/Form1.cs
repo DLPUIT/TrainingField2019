@@ -30,7 +30,7 @@ namespace WindowsFormsApp
         private void button3_Click(object sender, EventArgs e)
         {
             var name = dataGridView1.SelectedRows[0].Cells[1].Value as string;
-            // as 强制类型转换
+            // as string 强制类型转换
             this.service.DeleteMember(name);
         }
 

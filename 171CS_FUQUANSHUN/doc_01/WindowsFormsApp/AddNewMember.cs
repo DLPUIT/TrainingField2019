@@ -36,7 +36,7 @@ namespace WindowsFormsApp
             var newUser = new User
             {
                 ClassId = this.textBox1.Text,
-                Name = this.textBox2.Text,                ,
+                Name = this.textBox2.Text,                
                 EnglishName = this.textBox3.Text,
                 Gender = this.textBox4.Text,
                 Credit = int.Parse(this.textBox5.Text),
