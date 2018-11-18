@@ -100,6 +100,7 @@
     <Compile Include="AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditMode.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
