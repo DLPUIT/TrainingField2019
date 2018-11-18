@@ -36,5 +36,11 @@ namespace course4
             addWindow.Show();
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var EditWindow = new EditMem();
+            //EditMem.Show();
+        }
     }
 }
