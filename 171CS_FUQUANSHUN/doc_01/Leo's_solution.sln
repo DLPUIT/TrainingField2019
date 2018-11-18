@@ -5,7 +5,15 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student_Management", "Student_Management\Student_Management.csproj", "{3930BBC1-B497-4986-976F-0EA24A9B2A8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watch_ALG", "Watch_ALG\Watch_ALG.csproj", "{ACA40F2F-1AF8-481B-BB6D-EFE81EF1FA1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Watch_ALG", "Watch_ALG\Watch_ALG.csproj", "{ACA40F2F-1AF8-481B-BB6D-EFE81EF1FA1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLPU_Manager.service", "DLPU_Manager.service\DLPU_Manager.service.csproj", "{BBB9E6E8-DB57-44FE-9578-8C55F7257A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormManagement", "WindowsFormsApp\WinFormManagement.csproj", "{8796D967-4512-41D6-9031-2BD0218EF567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormBrowser", "WinFormBrowser\WinFormBrowser.csproj", "{9685D6F4-F004-498B-B532-8B12BFB305A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "代码调试专用", "代码调试专用\代码调试专用.csproj", "{32189904-8EEC-45BE-996B-2ECFB8292CAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{ACA40F2F-1AF8-481B-BB6D-EFE81EF1FA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACA40F2F-1AF8-481B-BB6D-EFE81EF1FA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACA40F2F-1AF8-481B-BB6D-EFE81EF1FA1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB9E6E8-DB57-44FE-9578-8C55F7257A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB9E6E8-DB57-44FE-9578-8C55F7257A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB9E6E8-DB57-44FE-9578-8C55F7257A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB9E6E8-DB57-44FE-9578-8C55F7257A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8796D967-4512-41D6-9031-2BD0218EF567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8796D967-4512-41D6-9031-2BD0218EF567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8796D967-4512-41D6-9031-2BD0218EF567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8796D967-4512-41D6-9031-2BD0218EF567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9685D6F4-F004-498B-B532-8B12BFB305A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9685D6F4-F004-498B-B532-8B12BFB305A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9685D6F4-F004-498B-B532-8B12BFB305A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9685D6F4-F004-498B-B532-8B12BFB305A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32189904-8EEC-45BE-996B-2ECFB8292CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32189904-8EEC-45BE-996B-2ECFB8292CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32189904-8EEC-45BE-996B-2ECFB8292CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32189904-8EEC-45BE-996B-2ECFB8292CAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
