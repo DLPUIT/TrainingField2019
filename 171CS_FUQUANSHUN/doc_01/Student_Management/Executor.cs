@@ -50,19 +50,27 @@ namespace Student_Management
             somebody.ClassId = Console.ReadLine();
             Console.Write("请输入姓名：");
             somebody.Name = Console.ReadLine();
+            Console.Write("请输入Engliash Name：");
+            somebody.EnglishName = Console.ReadLine();
+            Console.Write("请输入性别：");
+            somebody.Gender = Console.ReadLine();
             Console.Write("请输入当前积分：");
             somebody.Credit = int.Parse(Console.ReadLine());
             Console.Write("请输入GitHub账号：");
             somebody.GitHub = Console.ReadLine();
+            Console.Write("请输入CSDN账号：");
+            somebody.CSDN = Console.ReadLine();
+            Console.Write("请输入电子邮箱：");
+            somebody.Email = Console.ReadLine();
             this.service.AddMember(somebody);
             Console.WriteLine("添加成功！！！");
         }
 
         public void DeleteMember()
         {
-            Console.Write("请输入需要删除成员姓名：");
-            var name = Console.ReadLine();
-            this.service.DeleteMember(name);
+            Console.Write("请输入需要删除成员的信息：");
+            var str = Console.ReadLine();
+            this.service.DeleteMember(str);
             // this.service.DeleteMember(name);
             Console.WriteLine("成员删除成功！！！");
         }
@@ -78,20 +86,32 @@ namespace Student_Management
             }
             else
             {
-                Console.WriteLine($"姓名：{result.Name}");
                 Console.WriteLine($"班级ID：{result.ClassId}");
+                Console.WriteLine($"姓名：{result.Name}");                
+                Console.WriteLine($"English Name：{result.EnglishName}");
+                Console.WriteLine($"性别：{result.Gender}");
                 Console.WriteLine($"当前积分：{result.Credit}");
                 Console.WriteLine($"GitHub账号：{result.GitHub}");
+                Console.WriteLine($"CSDN账号：{result.CSDN}");
+                Console.WriteLine($"电子邮箱：{result.Email}");                
                 Console.WriteLine();
                 Console.WriteLine("开始编辑···");
                 Console.Write("请输入班级ID：");
                 result.ClassId = Console.ReadLine();
                 Console.Write("请输入姓名：");
                 result.Name = Console.ReadLine();
+                Console.Write("请输入英文名：");
+                result.EnglishName = Console.ReadLine();
+                Console.Write("请输入性别：");
+                result.Gender = Console.ReadLine();
                 Console.Write("请输入当前积分：");
                 result.Credit = int.Parse(Console.ReadLine());
                 Console.Write("请输入GitHub账号：");
                 result.GitHub = Console.ReadLine();
+                Console.Write("请输入CSDN账号：");
+                result.CSDN = Console.ReadLine();
+                Console.Write("请输入电子邮箱：");
+                result.Email = Console.ReadLine();
                 this.service.UpdateMember(result);
                 Console.WriteLine("成员信息更新成功！！！");
 
@@ -101,19 +121,23 @@ namespace Student_Management
 
         public void FindOne()
         {
-            Console.Write("开始查找成员信息···请输入成员姓名：");
-            var name = Console.ReadLine();
-            var result = this.service.FindMember(name);
+            Console.Write("开始查找成员信息···请输入成员信息：");
+            var str = Console.ReadLine();
+            var result = this.service.FindMember(str);
             if (result == null)
             {
-                Console.WriteLine($"未找到该成员：{name}");
+                Console.WriteLine($"未找到该对应信息的成员：{str}");
             }
             else
             {
-                Console.WriteLine($"姓名：{result.Name}");
                 Console.WriteLine($"班级ID：{result.ClassId}");
+                Console.WriteLine($"姓名：{result.Name}");
+                Console.WriteLine($"English Name：{result.EnglishName}");
+                Console.WriteLine($"性别：{result.Gender}");
                 Console.WriteLine($"当前积分：{result.Credit}");
                 Console.WriteLine($"GitHub账号：{result.GitHub}");
+                Console.WriteLine($"CSDN账号：{result.CSDN}");
+                Console.WriteLine($"电子邮箱：{result.Email}");
             }
         }
 
@@ -142,36 +166,43 @@ namespace Student_Management
         {
             while (true)
             {
-                Console.Write("请选择所需要的功能>>>");          // 输出不换行
-                var userInput = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(userInput))
+                try
                 {
-                    switch (userInput.Trim().ToLowerInvariant())
-                    // string 方法 trim() 作用去除输入内容前后的空格
-                    // string 方法 TolowerInvariant() 作用把大写字母全变成小写？？？大小写结合会怎样
+                    Console.Write("请选择所需要的功能>>>");          // 输出不换行
+                    var userInput = Console.ReadLine();
+                    if (!string.IsNullOrWhiteSpace(userInput))
                     {
-                        case "a":
-                            this.ShowAllMember();                           
-                            continue;       // 结束当前while循环，开始下次循环
-                        case "b":
-                            this.AddNewMember();
-                            continue;
-                        case "c":
-                            this.DeleteMember();
-                            continue;
-                        case "d":
-                            this.EditMember();
-                            continue;
-                        case "e":
-                            this.FindOne(); 
-                            continue;
-                        case "f":
-                            this.ShowRank();
-                            continue;
-                        case "g":
-                            this.Exit();
-                            continue;
+                        switch (userInput.Trim().ToLowerInvariant())
+                        // string 方法 trim() 作用去除输入内容前后的空格
+                        // string 方法 TolowerInvariant() 作用把大写字母全变成小写？？？大小写结合会怎样
+                        {
+                            case "a":
+                                this.ShowAllMember();
+                                continue;       // 结束当前while循环，开始下次循环
+                            case "b":
+                                this.AddNewMember();
+                                continue;
+                            case "c":
+                                this.DeleteMember();
+                                continue;
+                            case "d":
+                                this.EditMember();
+                                continue;
+                            case "e":
+                                this.FindOne();
+                                continue;
+                            case "f":
+                                this.ShowRank();
+                                continue;
+                            case "g":
+                                this.Exit();
+                                continue;
+                        }
                     }
+                }
+                catch(Exception troubleExcutor)
+                {
+                    Console.WriteLine($"程序发生异常，运行终止，详细信息：{troubleExcutor}");
                 }
             }
         }

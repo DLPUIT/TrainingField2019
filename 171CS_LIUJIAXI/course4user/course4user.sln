@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "course4user", "course4user\course4user.csproj", "{8F4E00BB-8514-42C2-8C32-E372809515D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DlpuManager.Service", "DlpuManager.Service\DlpuManager.Service.csproj", "{AA079BAB-3487-466F-85D2-92128BE4BC63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "course4", "course4\course4.csproj", "{72124D26-A1E1-4675-AFA2-CC243CCE80C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8F4E00BB-8514-42C2-8C32-E372809515D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F4E00BB-8514-42C2-8C32-E372809515D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F4E00BB-8514-42C2-8C32-E372809515D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA079BAB-3487-466F-85D2-92128BE4BC63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA079BAB-3487-466F-85D2-92128BE4BC63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA079BAB-3487-466F-85D2-92128BE4BC63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA079BAB-3487-466F-85D2-92128BE4BC63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72124D26-A1E1-4675-AFA2-CC243CCE80C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72124D26-A1E1-4675-AFA2-CC243CCE80C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72124D26-A1E1-4675-AFA2-CC243CCE80C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72124D26-A1E1-4675-AFA2-CC243CCE80C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

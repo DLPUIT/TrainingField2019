@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp0", "ConsoleApp0\ConsoleApp0.csproj", "{6C93EB86-8526-4061-86B1-6960054C0559}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLUPClassLibrary1", "DLUPClassLibrary1\DLUPClassLibrary1.csproj", "{D8C8FB09-F672-4ED5-926C-8720E2B6EFD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{FD65DA69-4310-4CF3-BDEB-8BC46055F943}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{6C93EB86-8526-4061-86B1-6960054C0559}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C93EB86-8526-4061-86B1-6960054C0559}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C93EB86-8526-4061-86B1-6960054C0559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C8FB09-F672-4ED5-926C-8720E2B6EFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C8FB09-F672-4ED5-926C-8720E2B6EFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C8FB09-F672-4ED5-926C-8720E2B6EFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C8FB09-F672-4ED5-926C-8720E2B6EFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD65DA69-4310-4CF3-BDEB-8BC46055F943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD65DA69-4310-4CF3-BDEB-8BC46055F943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD65DA69-4310-4CF3-BDEB-8BC46055F943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD65DA69-4310-4CF3-BDEB-8BC46055F943}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

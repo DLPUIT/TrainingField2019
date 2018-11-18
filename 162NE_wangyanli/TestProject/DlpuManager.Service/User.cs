@@ -8,7 +8,7 @@ namespace DlpuManager.Service
 {
     using SquirrelFramework.Domain.Model;
 
-    [Collection("User")]
+    [Collection("User2")]
     public class User : DomainModel
     {
         public string ClassId { get; set; }

@@ -27,7 +27,7 @@ namespace DLPU_Manager.service
         }
         public void DeleteMember(string str)
         {
-            this.service.DeleteMany(x => x.Name == str | x.Credit == int.Parse(str) | x.Gender == str | x.CSDN == str | x.GitHub == str | x.EnglishName == str);
+            this.service.DeleteMany(x => x.Name == str || x.Credit == int.Parse(str) || x.Gender == str || x.CSDN == str || x.GitHub == str || x.EnglishName == str);
         }
         public IOrderedEnumerable<User> GetRank()
         {
@@ -35,7 +35,7 @@ namespace DLPU_Manager.service
         }
         public User FindMember(string str)
         {
-            return this.service.Get(x => x.Name == str | x.Credit == int.Parse(str) | x.Gender == str | x.CSDN == str | x.GitHub == str | x.EnglishName == str);
+            return this.service.Get(x => x.Name == str || x.Credit == int.Parse(str) || x.Gender == str || x.CSDN == str || x.GitHub == str || x.EnglishName == str);
         }
     }
 }
