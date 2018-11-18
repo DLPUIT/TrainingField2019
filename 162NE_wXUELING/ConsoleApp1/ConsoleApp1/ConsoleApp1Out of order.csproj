@@ -88,6 +88,12 @@
     <None Include="Config\redis.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DLUPClassLibrary1\DLUPClassLibrary1.csproj">
+      <Project>{d8c8fb09-f672-4ed5-926c-8720e2b6efd1}</Project>
+      <Name>DLUPClassLibrary1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
