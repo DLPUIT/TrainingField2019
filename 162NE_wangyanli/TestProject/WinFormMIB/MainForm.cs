@@ -51,16 +51,17 @@ namespace WinFormMIB
         {
 
         }
-
+        //添加
         private void button1_Click_1(object sender, EventArgs e)
         {
             var infoWindow = new MemberInfoForm(new User(), EditMode.Create);
-
             infoWindow.Show();
             // 更好的方式是下边这种: 为什么？
             // infoWindow.ShowDialog();
         }
 
+
+        //删除
         private void button2_Click(object sender, EventArgs e)
         {
             //var name = this.dataGridViewAllUser.CurrentRow.Cells[1].Value;
@@ -77,9 +78,35 @@ namespace WinFormMIB
             }
         }
 
+
+        //刷新
         private void button3_Click(object sender, EventArgs e)
         {
             this.LoadData();
+        }
+
+
+
+        //编辑
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //得到当前选中的人
+            if (this.dataGridViewAllUser.SelectedRows.Count < 1) { return; }
+            var currentSelectedMemberName = (string)this.dataGridViewAllUser.SelectedRows[0].Cells["姓名"].Value;
+            var userInfo = this.service.FindMember(currentSelectedMemberName);
+            var infoWindow = new MemberInfoForm(userInfo, EditMode.Edit);
+            infoWindow.Show();
+
+        }
+
+        private void dataGridViewAllUser_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dataGridViewAllUser.SelectedRows.Count < 1) { return; }
+            var currentSelectedMemberName = (string)this.dataGridViewAllUser.SelectedRows[0].Cells["姓名"].Value;
+            var userInfo = this.service.FindMember(currentSelectedMemberName);
+            var infoWindow = new MemberInfoForm(userInfo, EditMode.View);
+            infoWindow.ShowDialog();
+
         }
     }
 }
