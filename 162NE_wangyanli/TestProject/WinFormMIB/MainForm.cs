@@ -18,15 +18,11 @@ namespace WinFormMIB
         public MainForm()
         {
             InitializeComponent();
+            this.LoadData();
         }
         public void LoadData()
         {
             var allMember = this.service.GetAllMember();
-
-            // Way 1: 水军写法
-            //this.dataGridViewAllUser.DataSource = allMember;
-
-            // Way 2: 正规写法，去除或隐藏无用的列字段
             var dataTable = new DataTable();
             dataTable.Columns.Add("姓名", typeof(string));
             dataTable.Columns.Add("班级 ID", typeof(string));
