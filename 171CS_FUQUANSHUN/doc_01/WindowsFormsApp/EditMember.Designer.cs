@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp
 {
-    partial class AddNewMember
+    partial class EditMember
     {
         /// <summary>
         /// Required designer variable.
@@ -91,6 +91,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(190, 21);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -199,7 +200,7 @@
             this.textBox8.Size = new System.Drawing.Size(190, 21);
             this.textBox8.TabIndex = 18;
             // 
-            // AddNewMember
+            // EditMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,8 +223,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddNewMember";
-            this.Text = "AddNewMember";
+            this.Name = "EditMember";
+            this.Text = "数据编辑表";
             this.Load += new System.EventHandler(this.AddNewMember_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

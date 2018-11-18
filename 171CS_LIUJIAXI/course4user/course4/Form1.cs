@@ -1,4 +1,4 @@
-﻿using DLPU_Manager.service;
+﻿using DlpuManager.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp
+namespace course4
 {
     public partial class Form1 : Form
     {
@@ -17,27 +17,30 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
         }
-
-        private readonly DLPU_ManageService service = new DLPU_ManageService();
-             
-
+        private readonly DlpuManagerService service = new DlpuManagerService();
         private void button1_Click(object sender, EventArgs e)
         {
             var allMembers = this.service.GetAllMember();
             dataGridView1.DataSource = allMembers;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            var name = dataGridView1.SelectedRows[0].Cells[1].Value as string;
-            // as 强制类型转换
+            var name = (string)dataGridView1.SelectedRows[0].Cells[2].Value;//as string; 
             this.service.DeleteMember(name);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            var addWindowsForm = new AddNewMember();
-            addWindowsForm.Show();
+            var addWindow = new AddNew();
+            addWindow.Show();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var EditWindow = new EditMem();
+            //EditMem.Show();
         }
     }
 }
