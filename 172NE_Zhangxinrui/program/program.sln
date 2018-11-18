@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program", "program\program.csproj", "{2B3D702B-B5C3-4F74-89AE-51E3D190272D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "console_成员管理系统", "console_成员管理系统", "{4029FA35-E09F-4C57-9F0F-40868BEDFDCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "成员管理系统", "成员管理系统", "{F6B35A94-CADF-4B65-B2EE-F1006B06999E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "中间层_成员管理系统", "中间层_成员管理系统", "{8470303E-0AC3-4465-B232-B72885FBD5C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DlpuManager.Service", "ConsoleApp1\DlpuManager.Service.csproj", "{F44CBF87-29B5-4306-A6FD-0B64875EA494}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "winform_成员管理系统", "winform_成员管理系统", "{CF78CD59-0287-41E9-98DD-01358B9DC55C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp4", "WindowsFormsApp4\WindowsFormsApp4.csproj", "{80FBE9A8-A82B-489D-A320-D952F158CD82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mybrowser", "mybrowser\mybrowser.csproj", "{B7371139-E92A-4ADB-A55D-3244B1795A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B3D702B-B5C3-4F74-89AE-51E3D190272D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3D702B-B5C3-4F74-89AE-51E3D190272D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3D702B-B5C3-4F74-89AE-51E3D190272D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3D702B-B5C3-4F74-89AE-51E3D190272D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44CBF87-29B5-4306-A6FD-0B64875EA494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44CBF87-29B5-4306-A6FD-0B64875EA494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44CBF87-29B5-4306-A6FD-0B64875EA494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44CBF87-29B5-4306-A6FD-0B64875EA494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80FBE9A8-A82B-489D-A320-D952F158CD82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80FBE9A8-A82B-489D-A320-D952F158CD82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80FBE9A8-A82B-489D-A320-D952F158CD82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80FBE9A8-A82B-489D-A320-D952F158CD82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7371139-E92A-4ADB-A55D-3244B1795A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7371139-E92A-4ADB-A55D-3244B1795A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7371139-E92A-4ADB-A55D-3244B1795A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7371139-E92A-4ADB-A55D-3244B1795A22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2B3D702B-B5C3-4F74-89AE-51E3D190272D} = {4029FA35-E09F-4C57-9F0F-40868BEDFDCA}
+		{4029FA35-E09F-4C57-9F0F-40868BEDFDCA} = {F6B35A94-CADF-4B65-B2EE-F1006B06999E}
+		{8470303E-0AC3-4465-B232-B72885FBD5C0} = {F6B35A94-CADF-4B65-B2EE-F1006B06999E}
+		{F44CBF87-29B5-4306-A6FD-0B64875EA494} = {8470303E-0AC3-4465-B232-B72885FBD5C0}
+		{CF78CD59-0287-41E9-98DD-01358B9DC55C} = {F6B35A94-CADF-4B65-B2EE-F1006B06999E}
+		{80FBE9A8-A82B-489D-A320-D952F158CD82} = {CF78CD59-0287-41E9-98DD-01358B9DC55C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D0A68B5-7388-4C91-A576-B8F556E76940}
+	EndGlobalSection
+EndGlobal
