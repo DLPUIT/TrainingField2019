@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D51C08B4-7EBF-496F-A36E-C21352ECCD5E}</ProjectGuid>
+    <ProjectGuid>{3BF90005-9D82-4331-AEAF-03442F8C3CC5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindosForm1</RootNamespace>
-    <AssemblyName>WindosForm1</AssemblyName>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -90,11 +90,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Repository\Service.csproj">
-      <Project>{3e916b0e-8529-474d-83b7-ebb25e2a5052}</Project>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{98f65291-29d9-4bcd-a2dd-1cb6b65ae4d7}</Project>
       <Name>Service</Name>
     </ProjectReference>
   </ItemGroup>

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-     
-   public class Manage
+
+    public class Manage
     {
-       private  Repo handler = new Repo();
+        private Repo handler = new Repo();
         public void AddUser(UserModel user)
         {
             this.handler.Add(user);
@@ -19,17 +19,17 @@ namespace Repository
         {
             return this.handler.GetAll();
         }
-        public void DeleteUser(string name )
+        public void DeleteUser(string name)
         {
-            this.handler.DeleteMany(x => x.name == name);
+            this.handler.DeleteMany(x => x.Name == name);
         }
         public void UpdateUser(UserModel user)
         {
             this.handler.Update(user);
         }
-        public UserModel FindUser(string name )
+        public UserModel FindUser(string name)
         {
-            return this.handler.Get(x => x.name == name);
+            return this.handler.Get(x => x.Name == name);
         }
     }
 }

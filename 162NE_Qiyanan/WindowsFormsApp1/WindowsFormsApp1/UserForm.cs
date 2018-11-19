@@ -1,6 +1,4 @@
-﻿using Repository;
-using Service;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,20 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Repository;
+using Service;
 
-namespace WindosForm1
+namespace WindowsFormsApp1
 {
+
     public partial class UserForm : Form
     {
         private Manage newManage = new Manage();
-        private UserModel user;
         private EditMode model;
-        public UserForm(UserModel newUser, EditMode model)
+        private UserModel user;
+        public UserForm(UserModel user, EditMode model)
         {
             InitializeComponent();
-            this.user = newUser ?? new UserModel();
+            this.user = user ?? new UserModel();
             this.model = model;
-            this.InitializeData();
+            InitializeData();
 
         }
         private void InitializeData()
@@ -32,7 +33,7 @@ namespace WindosForm1
                 this.ClassId.ReadOnly = true;
                 this.ClassName.ReadOnly = true;
                 this.Name.ReadOnly = true;
-                this.Credit.ReadOnly = true;
+                this.Credits.ReadOnly = true;
                 this.Gender.ReadOnly = true;
                 this.Team.ReadOnly = true;
                 this.GitHub.ReadOnly = true;
@@ -42,7 +43,7 @@ namespace WindosForm1
                 this.ClassId.Text = this.user.ClassId;
                 this.ClassName.Text = this.user.ClassName;
                 this.Name.Text = this.user.Name;
-                this.Credit.Text = this.user.Credits.ToString();
+                this.Credits.Text = this.user.Credits.ToString();
                 this.Gender.Text = this.user.Gender;
                 this.Team.Text = this.user.Team;
                 this.GitHub.Text = this.user.GitHub;
@@ -50,19 +51,42 @@ namespace WindosForm1
 
         }
 
-
         private void Submit_Click(object sender, EventArgs e)
         {
             if (model == EditMode.Create)
             {
                 this.user.ClassId = this.ClassId.Text;
                 this.user.ClassName = this.ClassName.Text;
-                this.user.Credits = Convert.ToInt32(this.Credit.Text);
+                this.user.Credits = Convert.ToInt32(this.Credits.Text);
                 this.user.Name = this.Name.Text;
                 this.user.Gender = this.Gender.Text;
-                this.user.Team = this.Gender.Text;
-                this.user.GitHub = this.Gender.Text;
+                this.user.Team = this.Team.Text;
+                this.user.GitHub = this.GitHub.Text;
                 this.newManage.AddUser(this.user);
+                MessageBox.Show("恭喜你，添加成功");
+
+            }
+            else if (model == EditMode.Edit)
+            {
+                this.user.ClassId = this.ClassId.Text;
+                this.user.ClassName = this.ClassName.Text;
+                this.user.Credits = Convert.ToInt32(this.Credits.Text);
+                this.user.Name = this.Name.Text;
+                this.user.Gender = this.Gender.Text;
+                this.user.Team = this.Team.Text;
+                this.user.GitHub = this.GitHub.Text;
+                this.newManage.UpdateUser(this.user);
+                MessageBox.Show("恭喜你，更新成功");
+            }
+            else if (model == EditMode.View)
+            {
+                this.ClassId.Text = this.user.ClassId;
+                this.ClassName.Text = this.user.ClassName;
+                this.Name.Text = this.user.Name;
+                this.Credits.Text = this.user.Credits.ToString();
+                this.Gender.Text = this.user.Gender;
+                this.Team.Text = this.user.Team;
+                this.GitHub.Text = this.user.GitHub;
             }
         }
 
@@ -70,15 +94,5 @@ namespace WindosForm1
         {
             this.Close();
         }
-
-
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
     }
 }
