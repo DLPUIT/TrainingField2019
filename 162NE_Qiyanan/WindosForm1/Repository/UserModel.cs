@@ -11,12 +11,12 @@ namespace Service
     [Collection("WinFormUser")]
     public  class UserModel:DomainModel
     {
-        public string classId{ get; set; }
-        public string className{ get; set; }
-        public string name { get; set; }
-        public int credits { get; set;}
-        public string gender { get; set; }
-        public string team { get; set; }
-        public string github { get; set; }
+        public string ClassId{ get; set; }
+        public string ClassName{ get; set; }
+        public string Name { get; set; }
+        public int Credits { get; set;}
+        public string Gender { get; set; }
+        public string Team { get; set; }
+        public string GitHub { get; set; }
     }
 }

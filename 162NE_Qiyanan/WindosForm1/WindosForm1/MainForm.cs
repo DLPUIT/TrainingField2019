@@ -39,9 +39,8 @@ namespace WindosForm1
 
         private void button2_Click(object sender, EventArgs e)
         {
-           var infoWindow = new UserForm();
+           var infoWindow = new UserForm(new UserModel(),EditMode.Create);
             infoWindow.Show();
-
         }
 
         private void button3_Click(object sender, EventArgs e)

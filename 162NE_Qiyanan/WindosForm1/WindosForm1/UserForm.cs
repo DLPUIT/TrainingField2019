@@ -15,65 +15,70 @@ namespace WindosForm1
     public partial class UserForm : Form
     {
         private Manage newManage = new Manage();
-        private UserModel user=new UserModel();
-        public UserForm()
+        private UserModel user;
+        private EditMode model;
+        public UserForm(UserModel newUser, EditMode model)
         {
             InitializeComponent();
-        }
+            this.user = newUser ?? new UserModel();
+            this.model = model;
+            this.InitializeData();
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        }
+        private void InitializeData()
         {
-            this.user.classId= this.textBox1.Text ;
+            if (this.model == EditMode.View)
+            {
+                this.ClassId.ReadOnly = true;
+                this.ClassName.ReadOnly = true;
+                this.Name.ReadOnly = true;
+                this.Credit.ReadOnly = true;
+                this.Gender.ReadOnly = true;
+                this.Team.ReadOnly = true;
+                this.GitHub.ReadOnly = true;
+            }
+            else
+            {
+                this.ClassId.Text = this.user.ClassId;
+                this.ClassName.Text = this.user.ClassName;
+                this.Name.Text = this.user.Name;
+                this.Credit.Text = this.user.Credits.ToString();
+                this.Gender.Text = this.user.Gender;
+                this.Team.Text = this.user.Team;
+                this.GitHub.Text = this.user.GitHub;
+            }
+
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+
+        private void Submit_Click(object sender, EventArgs e)
         {
-            this.user.className=this.textBox2.Text ;
+            if (model == EditMode.Create)
+            {
+                this.user.ClassId = this.ClassId.Text;
+                this.user.ClassName = this.ClassName.Text;
+                this.user.Credits = Convert.ToInt32(this.Credit.Text);
+                this.user.Name = this.Name.Text;
+                this.user.Gender = this.Gender.Text;
+                this.user.Team = this.Gender.Text;
+                this.user.GitHub = this.Gender.Text;
+                this.newManage.AddUser(this.user);
+            }
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            this.user.name =this.textBox3.Text;
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            this.user.credits = Convert.ToInt32(this.textBox4.Text);
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-            this.user.gender= this.textBox5.Text;
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-            this.user.team= this.textBox6.Text  ;
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-            this.user.github= this.textBox7.Text ;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.newManage.AddUser(this.user);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void label6_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
     }
 }
