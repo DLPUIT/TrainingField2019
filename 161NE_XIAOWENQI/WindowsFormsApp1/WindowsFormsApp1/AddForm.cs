@@ -6,7 +6,7 @@ namespace WindowsFormsApp1
 {
     public partial class AddForm : Form
     {
-        private readonly DatabaseOperation service = new DatabaseOperation();
+        private readonly DlpuManagerService service = new DlpuManagerService();
         private readonly User user;
         private readonly EditMode mode;
 
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
                     this.user.ClassId = this.textBoxClassID.Text;
                     this.user.Credits = int.Parse(this.textBoxCredit.Text);
                     this.user.GitHub = this.textBoxGitHub.Text;
-                    this.service.Add(this.user);
+                    this.service.AddMember(this.user);
                     break;
 
                 case EditMode.Edit:
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
                     this.user.ClassId = this.textBoxClassID.Text;
                     this.user.Credits = int.Parse(this.textBoxCredit.Text);
                     this.user.GitHub = this.textBoxGitHub.Text;
-                    this.service.Update(this.user);
+                    this.service.UpdateMember(this.user);
                     break;
 
                 case EditMode.View:

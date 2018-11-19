@@ -12,26 +12,26 @@ namespace WindowsFormsApp1
             InitializeComponent();
             this.LoadData();
         }
-        private readonly DatabaseOperation service = new DatabaseOperation();
+        private readonly DlpuManagerService service = new DlpuManagerService();
 
 
         public void LoadData()
         {
-            var allMember = this.service.GetAll();
+            var allMember = this.service.GetAllMember();
 
             var dataTable = new DataTable();
-            dataTable.Columns.Add("姓名", typeof(string));
-            dataTable.Columns.Add("英文名", typeof(string));
-            dataTable.Columns.Add("性别", typeof(string));
-            dataTable.Columns.Add("班级 ID", typeof(string));
-            dataTable.Columns.Add("得分", typeof(int));
+            dataTable.Columns.Add("Name", typeof(string));
+            dataTable.Columns.Add("EnglishName", typeof(string));
+            dataTable.Columns.Add("Gender", typeof(string));
+            dataTable.Columns.Add("ClassId", typeof(string));
+            dataTable.Columns.Add("Credits", typeof(int));
             dataTable.Columns.Add("GitHub", typeof(string));
 
             dataTable.Columns.Add("Id", typeof(string));
 
             foreach (var user in allMember)
             {
-                dataTable.Rows.Add(user.Name,user.EnglishName,user.Gender, user.ClassId, user.Credits, user.GitHub,user.Id);
+                dataTable.Rows.Add(user.Name,user.EnglishName,user.Gender, user.ClassId, user.Credits, user.GitHub);
             }
 
             this.dataGridView1.DataSource = dataTable;
@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var allMembers = this.service.GetAll();
+            var allMembers = this.service.GetAllMember();
             dataGridView1.DataSource = allMembers;
         }
 
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             var confirmResult = MessageBox.Show("你确定要删除这位成员吗?", "删除成员", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
             if (confirmResult == DialogResult.Yes)
             {
-                this.service.Delete(currentSelectedMemberName);
+                this.service.DeleteMember(currentSelectedMemberName);
                 this.LoadData();
             }
         }
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
         {
             if (this.dataGridView1.SelectedRows.Count < 1) { return; }
             var currentSelectedMemberName = (string)this.dataGridView1.SelectedRows[0].Cells["Name"].Value;
-            var userInfo = this.service.Get(currentSelectedMemberName);
+            var userInfo = this.service.FindMember(currentSelectedMemberName);
             var infoWindow = new AddForm(userInfo, EditMode.Edit);
             infoWindow.Show();
             
@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
         {
             if (this.dataGridView1.SelectedRows.Count < 1) { return; }
             var currentSelectedMemberName = (string)this.dataGridView1.SelectedRows[0].Cells["Name"].Value;
-            var user = this.service.Get(currentSelectedMemberName);
+            var user = this.service.FindMember(currentSelectedMemberName);
             var infoWindow = new AddForm(user, EditMode.View);
             infoWindow.ShowDialog();
         }
