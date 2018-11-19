@@ -38,8 +38,7 @@ namespace WindowsFormsApp1
                 this.Team.ReadOnly = true;
                 this.GitHub.ReadOnly = true;
             }
-            else
-            {
+         
                 this.ClassId.Text = this.user.ClassId;
                 this.ClassName.Text = this.user.ClassName;
                 this.Name.Text = this.user.Name;
@@ -47,7 +46,7 @@ namespace WindowsFormsApp1
                 this.Gender.Text = this.user.Gender;
                 this.Team.Text = this.user.Team;
                 this.GitHub.Text = this.user.GitHub;
-            }
+            
 
         }
 
@@ -80,13 +79,7 @@ namespace WindowsFormsApp1
             }
             else if (model == EditMode.View)
             {
-                this.ClassId.Text = this.user.ClassId;
-                this.ClassName.Text = this.user.ClassName;
-                this.Name.Text = this.user.Name;
-                this.Credits.Text = this.user.Credits.ToString();
-                this.Gender.Text = this.user.Gender;
-                this.Team.Text = this.user.Team;
-                this.GitHub.Text = this.user.GitHub;
+                return;
             }
         }
 
