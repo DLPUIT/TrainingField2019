@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario_Winform", "mario\Mario_Winform.csproj", "{72053B6C-EEDA-4767-973B-6E89CB788046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mario_service", "Mario_service\Mario_service.csproj", "{95319393-B595-416C-8359-D6C53AEBBDEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72053B6C-EEDA-4767-973B-6E89CB788046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72053B6C-EEDA-4767-973B-6E89CB788046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72053B6C-EEDA-4767-973B-6E89CB788046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72053B6C-EEDA-4767-973B-6E89CB788046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95319393-B595-416C-8359-D6C53AEBBDEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95319393-B595-416C-8359-D6C53AEBBDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95319393-B595-416C-8359-D6C53AEBBDEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95319393-B595-416C-8359-D6C53AEBBDEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1481F3EC-BDEC-429A-A35D-88B2CE232E3E}
+	EndGlobalSection
+EndGlobal

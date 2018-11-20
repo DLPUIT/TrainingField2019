@@ -1,8 +1,10 @@
-﻿namespace DlpuManager.Service
-{
-    using SquirrelFramework.Repository;
+﻿using SquirrelFramework.Repository;
 
+namespace DlpuManager.Service
+{
+    
     public class DatabaseOperation : RepositoryBase<User>
     {
+
     }
 }

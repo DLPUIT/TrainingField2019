@@ -42,8 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrandWatch\CASIO.cs" />
+    <Compile Include="BrandWatch\CITIZEN.cs" />
+    <Compile Include="BrandWatch\IWC.cs" />
+    <Compile Include="BrandWatch\OMEGA.cs" />
+    <Compile Include="BrandWatch\RADO.cs" />
+    <Compile Include="BrandWatch\TISSOT.cs" />
+    <Compile Include="Interface\IAutomaticWinding.cs" />
+    <Compile Include="Interface\ICalDay.cs" />
+    <Compile Include="Interface\IShowAD.cs" />
+    <Compile Include="Interface\IShowTime.cs" />
+    <Compile Include="Interface\IStopWatch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Watch\MechanicalWatch.cs" />
+    <Compile Include="Watch\QuartzWatch.cs" />
+    <Compile Include="Watch\SolarWatch.cs" />
+    <Compile Include="Watch\Watch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
