@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Inform.Properties
+namespace list.Properties
 {
 
 
