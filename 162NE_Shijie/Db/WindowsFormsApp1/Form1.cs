@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Db;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,31 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        Operation operation = new Operation();
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void allUser_Click(object sender, EventArgs e)
+        {
+            var alUser = operation.GetAllUser();
+            this.dataGridView1.DataSource = allUser;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
