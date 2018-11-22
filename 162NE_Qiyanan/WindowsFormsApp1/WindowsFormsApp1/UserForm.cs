@@ -63,6 +63,7 @@ namespace WindowsFormsApp1
                 this.user.GitHub = this.GitHub.Text;
                 this.newManage.AddUser(this.user);
                 MessageBox.Show("恭喜你，添加成功");
+                this.Close();
 
             }
             else if (model == EditMode.Edit)
@@ -76,6 +77,7 @@ namespace WindowsFormsApp1
                 this.user.GitHub = this.GitHub.Text;
                 this.newManage.UpdateUser(this.user);
                 MessageBox.Show("恭喜你，更新成功");
+                this.Close();
             }
             else if (model == EditMode.View)
             {

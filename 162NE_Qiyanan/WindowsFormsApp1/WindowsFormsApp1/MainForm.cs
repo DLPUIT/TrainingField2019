@@ -50,6 +50,7 @@ namespace WindowsFormsApp1
             var currentName = (string)this.dataGridView1.SelectedRows[0].Cells["Name"].Value;
             var infoUser = this.newManage.FindUser(currentName);
             var userForm = new UserForm(infoUser, EditMode.Edit);
+          
             userForm.Show();
         }
 
