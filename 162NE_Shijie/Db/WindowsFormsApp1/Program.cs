@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Db
 {
-    public class program
+    public class Program
     {
 
     }

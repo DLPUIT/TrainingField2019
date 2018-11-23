@@ -43,7 +43,7 @@
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(98, 47);
             this.addButton.TabIndex = 0;
-            this.addButton.Text = "增加";
+            this.addButton.Text = "添加";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
@@ -53,7 +53,7 @@
             this.allUser.Name = "allUser";
             this.allUser.Size = new System.Drawing.Size(109, 48);
             this.allUser.TabIndex = 1;
-            this.allUser.Text = "查看全部";
+            this.allUser.Text = "删除";
             this.allUser.UseVisualStyleBackColor = true;
             this.allUser.Click += new System.EventHandler(this.allUser_Click);
             // 
@@ -63,7 +63,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 46);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "更新";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -73,7 +73,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 46);
             this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
+            this.button4.Text = "查看";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -92,7 +92,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 45);
             this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
+            this.button1.Text = "查找";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
