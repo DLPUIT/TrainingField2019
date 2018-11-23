@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
 
         private void addButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void allUser_Click(object sender, EventArgs e)
