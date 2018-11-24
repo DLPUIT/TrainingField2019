@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brower", "Brower\Brower.csproj", "{0BD7CAB5-6054-484F-84EA-3D9528F3DA67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BD7CAB5-6054-484F-84EA-3D9528F3DA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD7CAB5-6054-484F-84EA-3D9528F3DA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD7CAB5-6054-484F-84EA-3D9528F3DA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD7CAB5-6054-484F-84EA-3D9528F3DA67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1657F71-6006-4B54-867B-C6D628FD2FD2}
+	EndGlobalSection
+EndGlobal
