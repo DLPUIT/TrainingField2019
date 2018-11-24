@@ -12,91 +12,105 @@ namespace ComboBox_Example
 {
     public partial class Form1 : Form
     {
+        private List<string> listCombobox;
         public Form1()
         {
             InitializeComponent();
-        }
-       /*    private List<MyComboItem> CreateComboItems()
-        {
-            List<MyComboItem> list = new List<MyComboItem>();
-            list.Add(new MyComboItem("列表框项目1"));
-            list.Add(new MyComboItem("列表框项目2"));
-            list.Add(new MyComboItem("列表框项目3"));
-          list.Add(new MyComboItem("列表框项目4"));
-            list.Add(new MyComboItem("列表框项目5"));
-            return list;
+           // comboBox1.SelectedIndex = 0;           
         }
 
 
-        private void comboBox1_SelectedIndexChanged(object sender,
-                EventArgs e)
-        {
-            // 获取被选中项目
-            MyComboItem item = comboBox1.SelectedItem as MyComboItem;
-            // 执行操作
-            item.Action();
-        }
-        //数据集绑定
-        private void BindCombox1()
-         {
-             DataTable dt = new DataTable();
-             DataColumn dc1 = new DataColumn("id");
-             DataColumn dc2 = new DataColumn("name");
-             dt.Columns.Add(dc1);
-             dt.Columns.Add(dc2);
-
-             DataRow dr1 = dt.NewRow();
-             dr1["id"] = "1";
-             dr1["name"] = "aaaaaa";
-
-             DataRow dr2 = dt.NewRow();
-             dr2["id"] = "2";
-             dr2["name"] = "bbbbbb";
-
-             dt.Rows.Add(dr1);
-             dt.Rows.Add(dr2);
-
-             comboBox1.DataSource = dt;
-             comboBox1.ValueMember = "id";
-             comboBox1.DisplayMember = "name";
-         }*/
-
-
-       private void Form1_Load(object sender, EventArgs e)
-          {
-              //先构造一个dataTable，或者从数据库读取到一个，这里自己构造一个
-              DataTable dataTable = new DataTable("Student");
-              dataTable.Columns.Add("Number", typeof(String));
-              dataTable.Columns.Add("Name", typeof(String));
-              dataTable.Columns.Add("RealName", typeof(String));
-              dataTable.Columns.Add("UserName", typeof(String));
-              dataTable.Columns.Add("Address", typeof(String));
-              dataTable.Rows.Add(new String[] { "1", "James", "张三", "james.zhang", "长沙" });
-              dataTable.Rows.Add(new String[] { "2", "Mary", "李四", "mary.xu", "山东" });
-              dataTable.Rows.Add(new String[] { "3", "Jack", "王五", "jack.li", "台湾" });
-              dataTable.Rows.Add(new String[] { "4", "joy", "赵六", "joy.zhou", "济南" });
-              dataTable.Rows.Add(new String[] { "5", "jay", "钱七", "jay.ji", "美国" });
-              dataTable.Rows.Add(new String[] { "6", "stephen", "康忠鑫", "Stephen.Kang", "深圳" });
-              comboBox1.DataSource = dataTable;//绑定
-              comboBox1.DisplayMember = dataTable.Columns[2].ColumnName;//显示的文本
-              comboBox1.ValueMember = dataTable.Columns[1].ColumnName;//对应的值
-          }
-          
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox1.SelectedIndex = 0;
-            this.comboBox1.Text = "请选择城市";
+
             labelshowselected.Text = comboBox1.SelectedItem.ToString();
         }
 
         private void labelshowselected_Click(object sender, EventArgs e)
-       {
-         
-        }
+        {
 
+
+        }
+        //按钮name属性写错了   是添加按钮对应的代码
         private void buttonselectedshow_Click(object sender, EventArgs e)
         {
-            labelshowselected.Text = comboBox1.SelectedItem.ToString();
+
+            if (comboBox1.Text != "")
+            {
+                string newItem = comboBox1.Text.Trim();
+                bool flag = false;
+                for (int i = 0; i < comboBox1.Items.Count; i++)
+                {
+                    if (string.Compare(newItem, comboBox1.Items[i].ToString()) == 0)
+                    {
+                        flag = true;
+                        this.BackColor = Color.Red;
+                        MessageBox.Show("已经有相同项，不能再添加");
+                    }
+                }
+
+                if (flag == false)
+                {
+                    comboBox1.Items.Add(newItem);               
+                    comboBox1.Text = "";
+                }
+            }
+
+
+        }
+         void MainForm_Load(object sender, EventArgs e)
+        {
+            listCombobox = getComboboxItems(this.comboBox1);//获取Item      
+        }
+        private void comboBox1_TextUpdate(object sender, EventArgs e)
+        {
+            selectCombobox(comboBox1, listCombobox);
+        }
+        #region 设置Combobox的方法
+        //模糊查询
+        //得到Combobox的数据，返回一个List
+        public List<string> getComboboxItems(ComboBox cb)
+        {
+            //初始化绑定默认关键词
+            List<string> listOnit = new List<string>();
+            //将数据项添加到listOnit中
+            for (int i = 0; i < cb.Items.Count; i++)
+            {
+                listOnit.Add(cb.Items[i].ToString());
+            }
+            return listOnit;
+        }
+        //模糊查询Combobox
+        public void selectCombobox(ComboBox cb, List<string> listOnit)
+        {
+            //输入key之后返回的关键词
+            List<string> listNew = new List<string>();
+            //清空combobox
+            cb.Items.Clear();
+            //清空listNew
+            listNew.Clear();
+            //遍历全部备查数据
+            foreach (var item in listOnit)
+            {
+                if (item.Contains(cb.Text))
+                {
+                    //符合，插入ListNew
+                    listNew.Add(item);
+                }
+            }
+            //combobox添加已经查询到的关键字
+            cb.Items.AddRange(listNew.ToArray());
+            //设置光标位置，否则光标位置始终保持在第一列，造成输入关键词的倒序排列
+            cb.SelectionStart = cb.Text.Length;
+            //保持鼠标指针原来状态，有时鼠标指针会被下拉框覆盖，所以要进行一次设置
+            Cursor = Cursors.Default;
+            //自动弹出下拉框
+            cb.DroppedDown = true;
+        }
+        #endregion
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
         }
     }
 }

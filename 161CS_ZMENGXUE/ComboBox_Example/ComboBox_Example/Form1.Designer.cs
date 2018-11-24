@@ -30,7 +30,9 @@
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelshowselected = new System.Windows.Forms.Label();
-            this.buttonselectedshow = new System.Windows.Forms.Button();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -42,7 +44,7 @@
             "台湾",
             "美国",
             "日本"});
-            this.comboBox1.Location = new System.Drawing.Point(111, 61);
+            this.comboBox1.Location = new System.Drawing.Point(111, 101);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 0;
@@ -57,22 +59,43 @@
             this.labelshowselected.TabIndex = 1;
             this.labelshowselected.Click += new System.EventHandler(this.labelshowselected_Click);
             // 
-            // buttonselectedshow
+            // btAdd
             // 
-            this.buttonselectedshow.Location = new System.Drawing.Point(226, 147);
-            this.buttonselectedshow.Name = "buttonselectedshow";
-            this.buttonselectedshow.Size = new System.Drawing.Size(75, 23);
-            this.buttonselectedshow.TabIndex = 2;
-            this.buttonselectedshow.Text = "显示选中项";
-            this.buttonselectedshow.UseVisualStyleBackColor = true;
-            this.buttonselectedshow.Click += new System.EventHandler(this.buttonselectedshow_Click);
+            this.btAdd.Location = new System.Drawing.Point(111, 175);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(47, 23);
+            this.btAdd.TabIndex = 2;
+            this.btAdd.Text = "添加";
+            this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.buttonselectedshow_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(109, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "你在哪个城市：";
+            // 
+            // btDelete
+            // 
+            this.btDelete.Location = new System.Drawing.Point(186, 175);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(46, 23);
+            this.btDelete.TabIndex = 4;
+            this.btDelete.Text = "删除";
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonselectedshow);
+            this.ClientSize = new System.Drawing.Size(445, 450);
+            this.Controls.Add(this.btDelete);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btAdd);
             this.Controls.Add(this.labelshowselected);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
@@ -86,7 +109,9 @@
 
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label labelshowselected;
-        private System.Windows.Forms.Button buttonselectedshow;
+        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btDelete;
     }
 }
 
