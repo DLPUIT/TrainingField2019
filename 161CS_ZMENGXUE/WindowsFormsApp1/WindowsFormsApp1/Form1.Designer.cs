@@ -38,6 +38,8 @@
             this.deletebutton = new System.Windows.Forms.Button();
             this.insertbutton = new System.Windows.Forms.Button();
             this.clearcheckedbutton = new System.Windows.Forms.Button();
+            this.buttondisplay = new System.Windows.Forms.Button();
+            this.buttonvalue = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +54,7 @@
             "running"});
             this.checkedListBox1.Location = new System.Drawing.Point(3, 42);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(372, 184);
+            this.checkedListBox1.Size = new System.Drawing.Size(497, 184);
             this.checkedListBox1.TabIndex = 0;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
@@ -73,7 +75,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(378, 366);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(503, 366);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -97,29 +99,33 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.Controls.Add(this.displaycheckedbutton, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.addbutton, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.deletebutton, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.insertbutton, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.clearcheckedbutton, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttondisplay, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonvalue, 6, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 325);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(363, 37);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(497, 37);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // displaycheckedbutton
             // 
             this.displaycheckedbutton.Location = new System.Drawing.Point(3, 3);
             this.displaycheckedbutton.Name = "displaycheckedbutton";
-            this.displaycheckedbutton.Size = new System.Drawing.Size(66, 23);
+            this.displaycheckedbutton.Size = new System.Drawing.Size(63, 23);
             this.displaycheckedbutton.TabIndex = 3;
             this.displaycheckedbutton.Text = "显示勾选项";
             this.displaycheckedbutton.UseVisualStyleBackColor = true;
@@ -127,9 +133,9 @@
             // 
             // addbutton
             // 
-            this.addbutton.Location = new System.Drawing.Point(75, 3);
+            this.addbutton.Location = new System.Drawing.Point(72, 3);
             this.addbutton.Name = "addbutton";
-            this.addbutton.Size = new System.Drawing.Size(66, 23);
+            this.addbutton.Size = new System.Drawing.Size(63, 23);
             this.addbutton.TabIndex = 4;
             this.addbutton.Text = "增加条目";
             this.addbutton.UseVisualStyleBackColor = true;
@@ -137,9 +143,9 @@
             // 
             // deletebutton
             // 
-            this.deletebutton.Location = new System.Drawing.Point(147, 3);
+            this.deletebutton.Location = new System.Drawing.Point(141, 3);
             this.deletebutton.Name = "deletebutton";
-            this.deletebutton.Size = new System.Drawing.Size(66, 23);
+            this.deletebutton.Size = new System.Drawing.Size(63, 23);
             this.deletebutton.TabIndex = 5;
             this.deletebutton.Text = "删除条目";
             this.deletebutton.UseVisualStyleBackColor = true;
@@ -147,9 +153,9 @@
             // 
             // insertbutton
             // 
-            this.insertbutton.Location = new System.Drawing.Point(219, 3);
+            this.insertbutton.Location = new System.Drawing.Point(210, 3);
             this.insertbutton.Name = "insertbutton";
-            this.insertbutton.Size = new System.Drawing.Size(66, 23);
+            this.insertbutton.Size = new System.Drawing.Size(63, 23);
             this.insertbutton.TabIndex = 6;
             this.insertbutton.Text = "插入条目";
             this.insertbutton.UseVisualStyleBackColor = true;
@@ -157,19 +163,38 @@
             // 
             // clearcheckedbutton
             // 
-            this.clearcheckedbutton.Location = new System.Drawing.Point(291, 3);
+            this.clearcheckedbutton.Location = new System.Drawing.Point(279, 3);
             this.clearcheckedbutton.Name = "clearcheckedbutton";
-            this.clearcheckedbutton.Size = new System.Drawing.Size(69, 23);
+            this.clearcheckedbutton.Size = new System.Drawing.Size(63, 23);
             this.clearcheckedbutton.TabIndex = 7;
             this.clearcheckedbutton.Text = "清除选择";
             this.clearcheckedbutton.UseVisualStyleBackColor = true;
             this.clearcheckedbutton.Click += new System.EventHandler(this.clearcheckedbutton_Click);
             // 
+            // buttondisplay
+            // 
+            this.buttondisplay.Location = new System.Drawing.Point(348, 3);
+            this.buttondisplay.Name = "buttondisplay";
+            this.buttondisplay.Size = new System.Drawing.Size(68, 23);
+            this.buttondisplay.TabIndex = 8;
+            this.buttondisplay.Text = "显示文本";
+            this.buttondisplay.UseVisualStyleBackColor = true;
+            this.buttondisplay.Click += new System.EventHandler(this.buttondisplay_Click);
+            // 
+            // buttonvalue
+            // 
+            this.buttonvalue.Location = new System.Drawing.Point(422, 3);
+            this.buttonvalue.Name = "buttonvalue";
+            this.buttonvalue.Size = new System.Drawing.Size(72, 23);
+            this.buttonvalue.TabIndex = 9;
+            this.buttonvalue.Text = "显示实际";
+            this.buttonvalue.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 366);
+            this.ClientSize = new System.Drawing.Size(503, 366);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -192,6 +217,8 @@
         private System.Windows.Forms.Button deletebutton;
         private System.Windows.Forms.Button insertbutton;
         private System.Windows.Forms.Button clearcheckedbutton;
+        private System.Windows.Forms.Button buttondisplay;
+        private System.Windows.Forms.Button buttonvalue;
     }
 }
 

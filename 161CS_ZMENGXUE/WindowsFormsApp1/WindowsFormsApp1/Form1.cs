@@ -15,6 +15,18 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            LoadData();
+        }
+        public void LoadData()
+        {
+          
+            var dataTable = new MyDataTable();
+            //checkedListBox1.DataSource = MyDataTable;
+            checkedListBox1.ValueMember = "ID";
+            checkedListBox1.DisplayMember = "TypeName";
+           // dataTable.Columns.Add("ID", typeof(string));
+            //dataTable.Columns.Add("类型名称", typeof(string));
+           
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,8 +107,11 @@ namespace WindowsFormsApp1
                 {
                     checkedListBox1.SetItemChecked(index,true);
                 }
-            }
-           
+            }                   
+        }
+
+        private void buttondisplay_Click(object sender, EventArgs e)
+        {
           
         }
     }
