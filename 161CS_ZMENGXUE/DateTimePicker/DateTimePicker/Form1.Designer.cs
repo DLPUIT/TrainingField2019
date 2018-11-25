@@ -38,6 +38,10 @@
             this.textBoxshowday = new System.Windows.Forms.TextBox();
             this.textBoxnowdate = new System.Windows.Forms.TextBox();
             this.labelnowdate = new System.Windows.Forms.Label();
+            this.labeltextshow = new System.Windows.Forms.Label();
+            this.textBoxtextshow = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxvalueshow = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -57,9 +61,9 @@
             this.labelbirthday.AutoSize = true;
             this.labelbirthday.Location = new System.Drawing.Point(55, 53);
             this.labelbirthday.Name = "labelbirthday";
-            this.labelbirthday.Size = new System.Drawing.Size(53, 12);
+            this.labelbirthday.Size = new System.Drawing.Size(65, 12);
             this.labelbirthday.TabIndex = 1;
-            this.labelbirthday.Text = "您的生日";
+            this.labelbirthday.Text = "您的生日：";
             // 
             // selectedyear
             // 
@@ -121,15 +125,51 @@
             this.labelnowdate.AutoSize = true;
             this.labelnowdate.Location = new System.Drawing.Point(55, 20);
             this.labelnowdate.Name = "labelnowdate";
-            this.labelnowdate.Size = new System.Drawing.Size(53, 12);
+            this.labelnowdate.Size = new System.Drawing.Size(65, 12);
             this.labelnowdate.TabIndex = 9;
-            this.labelnowdate.Text = "当前日期";
+            this.labelnowdate.Text = "当前日期：";
+            // 
+            // labeltextshow
+            // 
+            this.labeltextshow.AutoSize = true;
+            this.labeltextshow.Location = new System.Drawing.Point(55, 200);
+            this.labeltextshow.Name = "labeltextshow";
+            this.labeltextshow.Size = new System.Drawing.Size(65, 12);
+            this.labeltextshow.TabIndex = 10;
+            this.labeltextshow.Text = "Text显示：";
+            // 
+            // textBoxtextshow
+            // 
+            this.textBoxtextshow.Location = new System.Drawing.Point(136, 200);
+            this.textBoxtextshow.Name = "textBoxtextshow";
+            this.textBoxtextshow.Size = new System.Drawing.Size(200, 21);
+            this.textBoxtextshow.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 239);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 12);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Value显示：";
+            // 
+            // textBoxvalueshow
+            // 
+            this.textBoxvalueshow.Location = new System.Drawing.Point(136, 236);
+            this.textBoxvalueshow.Name = "textBoxvalueshow";
+            this.textBoxvalueshow.Size = new System.Drawing.Size(200, 21);
+            this.textBoxvalueshow.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBoxvalueshow);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxtextshow);
+            this.Controls.Add(this.labeltextshow);
             this.Controls.Add(this.labelnowdate);
             this.Controls.Add(this.textBoxnowdate);
             this.Controls.Add(this.textBoxshowday);
@@ -159,6 +199,10 @@
         private System.Windows.Forms.TextBox textBoxshowday;
         private System.Windows.Forms.TextBox textBoxnowdate;
         private System.Windows.Forms.Label labelnowdate;
+        private System.Windows.Forms.Label labeltextshow;
+        private System.Windows.Forms.TextBox textBoxtextshow;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxvalueshow;
     }
 }
 
