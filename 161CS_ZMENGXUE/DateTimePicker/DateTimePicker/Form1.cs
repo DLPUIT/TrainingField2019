@@ -17,7 +17,7 @@ namespace DateTimePicker
             InitializeComponent();
             dateTimePicker1.Format = DateTimePickerFormat.Custom; //设置为显示格式为自定义
             dateTimePicker1.CustomFormat = "yyyy-MM-dd"; //设置显示格式
-            dateTimePicker1.ShowUpDown = false;
+            dateTimePicker1.ShowUpDown = true;
             textBoxnowdate.Text = DateTime.Now.Date.ToString(); //设为当前日期
             String Byear = dateTimePicker1.Value.Year.ToString();               
             String Bmonth = dateTimePicker1.Value.Month.ToString();
@@ -26,8 +26,6 @@ namespace DateTimePicker
             String Nyear = DateTime.Now.Date.Year.ToString();
             String Nmonth = DateTime.Now.Date.Month.ToString();
             String Nday = DateTime.Now.Date.Day.ToString();
-
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -37,7 +35,7 @@ namespace DateTimePicker
             textBoxshowday.Text = dateTimePicker1.Value.Day.ToString() + "日";          
             textBoxvalueshow.Text = dateTimePicker1.Value.ToString();
             textBoxtextshow.Text = dateTimePicker1.Text.ToString();
-            textBoxvalueshow.Text = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            textBoxvalueshow.Text = dateTimePicker1.Value.ToString();
         }
     }
 }

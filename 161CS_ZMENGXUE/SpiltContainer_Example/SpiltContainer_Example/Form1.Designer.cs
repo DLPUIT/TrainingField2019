@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btUp = new System.Windows.Forms.Button();
+            this.btDown = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemopen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemnew = new System.Windows.Forms.ToolStripMenuItem();
-            this.btDown = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.btUp = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.labelmovemes = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.labelmovemes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -72,6 +72,37 @@
             this.splitContainer1.Size = new System.Drawing.Size(619, 450);
             this.splitContainer1.SplitterDistance = 48;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::SpiltContainer_Example.Properties.Resources.buttonedit;
+            this.button1.Location = new System.Drawing.Point(496, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 32);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btUp
+            // 
+            this.btUp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btUp.Location = new System.Drawing.Point(432, 3);
+            this.btUp.Name = "btUp";
+            this.btUp.Size = new System.Drawing.Size(33, 32);
+            this.btUp.TabIndex = 2;
+            this.btUp.Text = "↑";
+            this.btUp.UseVisualStyleBackColor = false;
+            this.btUp.Click += new System.EventHandler(this.btUp_Click);
+            // 
+            // btDown
+            // 
+            this.btDown.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btDown.Location = new System.Drawing.Point(364, 3);
+            this.btDown.Name = "btDown";
+            this.btDown.Size = new System.Drawing.Size(35, 32);
+            this.btDown.TabIndex = 1;
+            this.btDown.Text = "↓";
+            this.btDown.UseVisualStyleBackColor = false;
+            this.btDown.Click += new System.EventHandler(this.btDown_Click);
             // 
             // menuStrip1
             // 
@@ -106,17 +137,6 @@
             this.toolStripMenuItemnew.Size = new System.Drawing.Size(180, 26);
             this.toolStripMenuItemnew.Text = "new";
             // 
-            // btDown
-            // 
-            this.btDown.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btDown.Location = new System.Drawing.Point(364, 3);
-            this.btDown.Name = "btDown";
-            this.btDown.Size = new System.Drawing.Size(35, 32);
-            this.btDown.TabIndex = 1;
-            this.btDown.Text = "↓";
-            this.btDown.UseVisualStyleBackColor = false;
-            this.btDown.Click += new System.EventHandler(this.btDown_Click);
-            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -134,29 +154,17 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Size = new System.Drawing.Size(619, 398);
-            this.splitContainer2.SplitterDistance = 172;
+            this.splitContainer2.SplitterDistance = 200;
             this.splitContainer2.TabIndex = 0;
             this.splitContainer2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer2_SplitterMoved_1);
             // 
-            // btUp
+            // labelmovemes
             // 
-            this.btUp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btUp.Location = new System.Drawing.Point(432, 3);
-            this.btUp.Name = "btUp";
-            this.btUp.Size = new System.Drawing.Size(33, 32);
-            this.btUp.TabIndex = 2;
-            this.btUp.Text = "↑";
-            this.btUp.UseVisualStyleBackColor = false;
-            this.btUp.Click += new System.EventHandler(this.btUp_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::SpiltContainer_Example.Properties.Resources.buttonedit;
-            this.button1.Location = new System.Drawing.Point(496, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 32);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
+            this.labelmovemes.AutoSize = true;
+            this.labelmovemes.Location = new System.Drawing.Point(537, 48);
+            this.labelmovemes.Name = "labelmovemes";
+            this.labelmovemes.Size = new System.Drawing.Size(0, 12);
+            this.labelmovemes.TabIndex = 1;
             // 
             // label1
             // 
@@ -175,14 +183,6 @@
             this.label2.Size = new System.Drawing.Size(131, 12);
             this.label2.TabIndex = 0;
             this.label2.Text = "spiltcontainer_panel2";
-            // 
-            // labelmovemes
-            // 
-            this.labelmovemes.AutoSize = true;
-            this.labelmovemes.Location = new System.Drawing.Point(537, 48);
-            this.labelmovemes.Name = "labelmovemes";
-            this.labelmovemes.Size = new System.Drawing.Size(0, 12);
-            this.labelmovemes.TabIndex = 1;
             // 
             // Form1
             // 
