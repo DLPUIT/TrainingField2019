@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonLoad
             // 
-            this.button1.Location = new System.Drawing.Point(189, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 52);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "加载数据";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLoad.Location = new System.Drawing.Point(189, 18);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(65, 52);
+            this.buttonLoad.TabIndex = 1;
+            this.buttonLoad.Text = "加载数据";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // dataGridView1
             // 
@@ -57,69 +57,69 @@
             this.dataGridView1.Size = new System.Drawing.Size(560, 315);
             this.dataGridView1.TabIndex = 2;
             // 
-            // button2
+            // buttonAdd
             // 
-            this.button2.Location = new System.Drawing.Point(289, 18);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(65, 52);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "增";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonAdd.Location = new System.Drawing.Point(289, 18);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(65, 52);
+            this.buttonAdd.TabIndex = 3;
+            this.buttonAdd.Text = "增";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // button3
+            // buttonDelete
             // 
-            this.button3.Location = new System.Drawing.Point(389, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(65, 52);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "删";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonDelete.Location = new System.Drawing.Point(389, 18);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(65, 52);
+            this.buttonDelete.TabIndex = 4;
+            this.buttonDelete.Text = "删";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // button4
+            // buttonEdit
             // 
-            this.button4.Location = new System.Drawing.Point(489, 18);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(65, 52);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "改";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonEdit.Location = new System.Drawing.Point(489, 18);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(65, 52);
+            this.buttonEdit.TabIndex = 5;
+            this.buttonEdit.Text = "改";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // button5
+            // buttonSearch
             // 
-            this.button5.Location = new System.Drawing.Point(589, 18);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(65, 52);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "查";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonSearch.Location = new System.Drawing.Point(589, 18);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(65, 52);
+            this.buttonSearch.TabIndex = 6;
+            this.buttonSearch.Text = "查";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // button6
+            // buttonRefresh
             // 
-            this.button6.Location = new System.Drawing.Point(686, 18);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(65, 52);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "刷新";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonRefresh.Location = new System.Drawing.Point(686, 18);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(65, 52);
+            this.buttonRefresh.TabIndex = 7;
+            this.buttonRefresh.Text = "刷新";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // winformManagement
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 511);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonRefresh);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.buttonEdit);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Name = "winformManagement";
+            this.Controls.Add(this.buttonLoad);
+            this.Name = "MainForm";
             this.Text = "学生数据表";
             this.Load += new System.EventHandler(this.winformManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -129,13 +129,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonLoad;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }
 
