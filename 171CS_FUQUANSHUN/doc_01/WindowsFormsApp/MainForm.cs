@@ -68,9 +68,11 @@ namespace WindowsFormsApp
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            var deleteWindowsFormMember = dataGridView1.SelectedRows[0].Cells[1].Value as string;
+            // var deleteWindowsFormMember = dataGridView1.SelectedRows[0].Cells[1].Value as string;
             // as string 强制类型转换
-            this.service.DeleteMember(deleteWindowsFormMember);
+            // this.service.DeleteMember(deleteWindowsFormMember);
+            if(this.dataGridView1.SelectedRows.Count < 1) { return; }
+            var
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -86,6 +88,11 @@ namespace WindowsFormsApp
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             this.buttonAdd_Click(sender, e);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
