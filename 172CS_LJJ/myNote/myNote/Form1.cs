@@ -42,7 +42,6 @@ namespace myNote
 
         private void 保存SToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
@@ -57,6 +56,11 @@ namespace myNote
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 文件FToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
