@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WinFormControls
 {
-    public partial class MainForm : Form
+    public partial class PicBoxForm : Form
     {
-        public MainForm()
+        public PicBoxForm()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

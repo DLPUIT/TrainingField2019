@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace WinFormControls
 {
-    public partial class MainForm : Form
+    public partial class NumUpDownForm : Form
     {
-        public MainForm()
+        public NumUpDownForm()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void updown01_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }

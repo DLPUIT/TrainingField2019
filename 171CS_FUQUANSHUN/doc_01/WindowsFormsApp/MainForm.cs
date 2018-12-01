@@ -72,7 +72,7 @@ namespace WindowsFormsApp
             // as string 强制类型转换
             // this.service.DeleteMember(deleteWindowsFormMember);
             if(this.dataGridView1.SelectedRows.Count < 1) { return; }
-            var
+            
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)

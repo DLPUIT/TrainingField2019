@@ -16,6 +16,10 @@ namespace WinFormControls
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // Application.Run(new NumUpDownForm());
+            // Application.Run(new PicBoxForm());
+            // Application.Run(new ProBarForm());
+            // Application.Run(new TabConForm());
             Application.Run(new MainForm());
         }
     }
