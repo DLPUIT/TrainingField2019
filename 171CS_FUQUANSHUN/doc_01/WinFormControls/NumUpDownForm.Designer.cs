@@ -71,6 +71,7 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.numericUpDown1.Location = new System.Drawing.Point(378, 3);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
