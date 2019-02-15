@@ -6,11 +6,33 @@ namespace WindowsFormsApp1
 {
     public partial class AddForm : Form
     {
-        public AddForm()
+        private readonly DlpuManagerService service = new DlpuManagerService();
+        private readonly User user;
+        private readonly EditMode mode;
+
+        public AddForm(User user, EditMode mode)
         {
-            InitializeComponent();
+            this.InitializeComponent();
+            this.user = user ?? new User();
+            this.mode = mode;
+            this.InitializeData();
         }
-        private readonly DatabaseOperation service = new DatabaseOperation();
+
+        private void InitializeData()
+        {
+            if (this.mode == EditMode.View)
+            {
+                this.textBoxName.ReadOnly = true;
+                this.textBoxClassID.ReadOnly = true;
+                this.textBoxCredit.ReadOnly = true;
+                this.textBoxGitHub.ReadOnly = true;
+            }
+            this.textBoxName.Text = this.user.Name;
+            this.textBoxClassID.Text = this.user.ClassId;
+            this.textBoxCredit.Text = this.user.Credits.ToString();
+            this.textBoxGitHub.Text = this.user.GitHub;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -19,15 +41,27 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             var user = new User();
+                switch (this.mode)
             {
-                user.Name = textBox1.Text;
-                user.EnglishName = textBox6.Text;
-                user.Gender = textBox5.Text;
-                user.ClassId= textBox2.Text;
-                user.Credits= int.Parse(textBox3.Text);
-                user.GitHub = textBox4.Text;
+                case EditMode.Create:
+                    this.user.Name = this.textBoxName.Text;
+                    this.user.ClassId = this.textBoxClassID.Text;
+                    this.user.Credits = int.Parse(this.textBoxCredit.Text);
+                    this.user.GitHub = this.textBoxGitHub.Text;
+                    this.service.AddMember(this.user);
+                    break;
+
+                case EditMode.Edit:
+                    this.user.Name = this.textBoxName.Text;
+                    this.user.ClassId = this.textBoxClassID.Text;
+                    this.user.Credits = int.Parse(this.textBoxCredit.Text);
+                    this.user.GitHub = this.textBoxGitHub.Text;
+                    this.service.UpdateMember(this.user);
+                    break;
+
+                case EditMode.View:
+                    break;
             }
-            this.service.Add(user);
             this.Close();
         }
     }

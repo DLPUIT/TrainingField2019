@@ -29,9 +29,9 @@ namespace MyBrowser
             this.webBrowser1.Refresh();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonRefresh_Click(object sender, EventArgs e)
         {
-            LoadPage();
+            this.LoadPage();
         }
 
         private void textBox_KeyDown(object sender, KeyEventArgs e)

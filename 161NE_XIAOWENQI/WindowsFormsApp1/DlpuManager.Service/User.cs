@@ -1,7 +1,7 @@
-﻿namespace DlpuManager.Service
-{
-    using SquirrelFramework.Domain.Model;
+﻿using SquirrelFramework.Domain.Model;
 
+namespace DlpuManager.Service
+{
     [Collection("User")]
     public class User : DomainModel
     {
