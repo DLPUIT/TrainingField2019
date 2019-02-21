@@ -25,7 +25,6 @@ namespace EventsBerry
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            
             services.AddSwaggerGen(swagger =>
             {
                 swagger.DescribeAllEnumsAsStrings();
@@ -41,13 +40,11 @@ namespace EventsBerry
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "EventsBerry");
             });
-
             app.UseMvc();
         }
     }

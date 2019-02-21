@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsBerry", "EventsBerry\EventsBerry.csproj", "{5BDAF6F2-E4FA-4959-8B6F-D5507E0F77CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsBerry", "EventsBerry\EventsBerry.csproj", "{9A8CE24F-C956-40F9-973B-B7785E92387C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5BDAF6F2-E4FA-4959-8B6F-D5507E0F77CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BDAF6F2-E4FA-4959-8B6F-D5507E0F77CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BDAF6F2-E4FA-4959-8B6F-D5507E0F77CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BDAF6F2-E4FA-4959-8B6F-D5507E0F77CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8CE24F-C956-40F9-973B-B7785E92387C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8CE24F-C956-40F9-973B-B7785E92387C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8CE24F-C956-40F9-973B-B7785E92387C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8CE24F-C956-40F9-973B-B7785E92387C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {79E96C7E-4465-4400-B8EC-59D06FB8D5BE}
+		SolutionGuid = {73056E65-A179-4882-BA75-1B168B9749C4}
 	EndGlobalSection
 EndGlobal

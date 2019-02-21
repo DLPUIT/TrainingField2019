@@ -1,64 +1,51 @@
-﻿using EventsBerry.Model;
-using EventsBerry.Repository;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using EventsBerry.Models;
+using EventsBerry.Repositories;
+using Microsoft.AspNetCore.Mvc;
+
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace EventsBerry.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class EventController : ControllerBase
+    public class EventController : Controller
     {
-        private static readonly EventRepository eventRepository = new EventRepository();
-
-        // GET: api/Event
+        private EventRepository repository = new EventRepository();
+        // GET: api/<controller>
         [HttpGet]
-        public dynamic Get()
+        public IEnumerable<Event> Get()
         {
-            //var query =
-            //    from u in eventRepository.AsQueryable()
-            //    orderby u.CreatedTime descending
-            //    select new
-            //    {
-            //        Id = u.Id,
-            //        OrganizerId = u.OrganizerId,
-            //        OrganizerDisplayName = u.OrganizerDisplayName,
-            //        TimeRange = u.TimeRange,
-            //        Topic = u.Topic,
-            //        Description = u.Description,
-            //    };
-            //return query.ToList();
-
-            return eventRepository.GetAll();
+            return this.repository.GetAll();
         }
-
-        // GET: api/Event/5xxx
-        [HttpGet("{id}", Name = "Get")]
+        // GET api/<controller>/5
+        [HttpGet("{id}")]
         public Event Get(string id)
         {
-            return eventRepository.Get(id);
+            return this.repository.Get(id);
         }
 
-        // POST: api/Event
+        // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody] Event value)
+        public void Post(Event value)
         {
-            value.CreatedTime = DateTime.UtcNow;
-            eventRepository.AddAsync(value);
+            this.repository.Add(value);
         }
 
-        //// PUT: api/Event/5xxx
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(string id)
+        // PUT api/<controller>/5
+        [HttpPut("{id}")]
+        public void Put(Event value)
         {
-            eventRepository.DeleteAsync(id);
+            this.repository.Update(value);
+        }
+
+        // DELETE api/<controller>/5
+        [HttpDelete("{id}")]
+        public void Delete(string eventId)
+        {
+            this.repository.Delete(eventId);
         }
     }
 }

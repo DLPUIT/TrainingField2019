@@ -1,16 +1,13 @@
 ﻿using SquirrelFramework.Domain.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace EventsBerry.Model
+namespace EventsBerry.Models
 {
     public class Event : DomainModel
     {
-        public Event()
-        {
-            this.CheckInList = new List<CheckIn>();
-        }
-
         public string OrganizerId { get; set; }
         public string OrganizerDisplayName { get; set; }
         public string TimeRange { get; set; }
@@ -19,11 +16,10 @@ namespace EventsBerry.Model
         public DateTime CreatedTime { get; set; }
         public List<CheckIn> CheckInList { get; set; }
     }
-
     public class CheckIn
     {
-        public string ParticipatorId { get; set; }
-        public string ParticipatorDisplayName { get; set; }
+        public string ParticipaterId { get; set; }
+        public string ParticipaterDisplayName { get; set; }
         public DateTime CheckInTime { get; set; }
     }
 }
