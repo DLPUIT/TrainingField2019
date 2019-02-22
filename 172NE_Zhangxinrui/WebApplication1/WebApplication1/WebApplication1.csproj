@@ -7,9 +7,13 @@
 
   <ItemGroup>
     <Compile Remove="新文件夹2\新文件夹\**" />
+    <Compile Remove="新文件夹3\**" />
     <Content Remove="新文件夹2\新文件夹\**" />
+    <Content Remove="新文件夹3\**" />
     <EmbeddedResource Remove="新文件夹2\新文件夹\**" />
+    <EmbeddedResource Remove="新文件夹3\**" />
     <None Remove="新文件夹2\新文件夹\**" />
+    <None Remove="新文件夹3\**" />
   </ItemGroup>
 
   <ItemGroup>

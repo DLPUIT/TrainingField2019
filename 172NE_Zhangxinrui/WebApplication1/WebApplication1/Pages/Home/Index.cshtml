@@ -1,0 +1,107 @@
+﻿@page
+@using System.Text;
+@using WebApplication1.Repositories;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: solid 1px #4cff00;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>活动记录</h1>
+    <h2>显示所有活动</h2>
+    <h3>方法1</h3>
+    <input type="button" id="refresh-1" value="刷新1" />
+    <table>
+        <thead>
+            <tr>
+                <td>主题</td>
+                <td>组织者</td>
+                <td>简述</td>
+                <td>活动时间</td>
+                <td>参加者</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+
+                var classRepo = new ClassRepository();
+                var allClass = classRepo.GetAll();
+            }
+            @foreach (var e in allClass)
+            {
+                var participators = new StringBuilder();
+               /*foreach (var p in e.CheckInList)
+                {
+                    participators.AppendJoin(",", p.ParticipatorDisplayName);
+                }*/
+                <tr>
+                    <td>@e.Topic</td>
+                    <td>@e.OrganizerDisplayName</td>
+                    <td>@e.Discription</td>
+                    <td>@e.TimeRange</td>
+                    <td>@participators.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <script>
+        var refreshButton1 = document.querySelector('#refresh-1');
+        refreshButton1.onclick = function () {
+            window.location.reload();
+        }
+    </script>
+    <h1>活动记录</h1>
+    <h2>显示所有活动</h2>
+    <h3>方法2</h3>
+    <input type="button" id="refresh-2" value="刷新2" />
+    <table>
+        <tr>
+            <td>活动主题</td>
+            <td>组织者</td>
+            <td>描述</td>
+            <td>活动时间</td>
+            <td>参加者</td>
+        </tr>
+        <tbody id="class-list"></tbody>
+
+    </table>
+    <script>
+        var refreshButton2 = document.querySelector("#refresh-2");
+        refreshButton2.onclick = function () {
+            fetch('/api/class').then(function (response) {
+                return response.json();
+            }).then(function (data) {
+                console.log(data);
+                var participators = "";
+                var html = "";
+                data.forEach((d) => {
+                    d.checkInList.forEach((e) => {
+                        participators += (e.participatorDisplayName + ", ");
+                    })
+                    html += `<tr><td>${d.topic}</td><td>${d.organizerDisplayName}</td><td>${d.discription}</td><td>${d.timeRange}</td><td>${participators}</td></tr>`;
+                });
+                var classList = document.querySelector("#class-list");
+                classList.innerHTML = html;
+            }).catch(function (e) {
+                console.log("Oops, error" + e);
+            });
+        }
+    </script>
+</body>
+
+
+</html>
