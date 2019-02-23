@@ -23,14 +23,14 @@ namespace WebAppCore.Controllers
 
         // GET: api/API/5
         [HttpGet("{id}", Name = "Get")]
-        public Events Get(string id)
+        public Events Get(string id)        // 显示数据库内容
         {
             return this.repository.Get(id);
         }
 
         // POST: api/API
         [HttpPost]
-        public void Post(Events value)
+        public void Post(Events value)      // 保存到数据库
         {
             this.repository.Add(value);
         }
