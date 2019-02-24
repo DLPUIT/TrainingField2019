@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SquirrelFramework.Domain.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace WebAppCore.MainClass
         public DateTime CreatedTime { get; set; }
         public List<CheakIn> CheakInList { get; set; }
     }
-    public class CheakIn
+    public class CheakIn    // 签到表
     {
         public string ParticipatorId { get; set; }
         public string ParticipatorDisplayName { get; set; }
