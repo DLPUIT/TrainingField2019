@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using WebAppCore.MainClass;
 using WebAppCore.Repositories;
 
-namespace WebAppCore.Controllers
+namespace WebAppCore.Controllers        // 写给另一个程序调用，提供访问
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")]         // 路由
     [ApiController]
     public class EventsController : ControllerBase
     {
@@ -23,28 +23,28 @@ namespace WebAppCore.Controllers
 
         // GET: api/API/5
         [HttpGet("{id}", Name = "Get")]
-        public Events Get(string id)        // 显示数据库内容
+        public Events Get(string id)        // 查
         {
             return this.repository.Get(id);
         }
 
         // POST: api/API
         [HttpPost]
-        public void Post(Events value)      // 保存到数据库
+        public void Post(Events value)      // 增
         {
             this.repository.Add(value);
         }
 
         // PUT: api/API/5
         [HttpPut("{id}")]
-        public void Put(Events value)
+        public void Put(Events value)       // 改
         {
             this.repository.Update(value);
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(string id)
+        public void Delete(string id)       // 删
         {
             this.repository.Delete(id);  
         }
