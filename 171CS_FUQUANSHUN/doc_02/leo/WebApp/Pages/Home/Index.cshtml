@@ -1,0 +1,191 @@
+﻿@using WebApp.Repositories;
+
+@page
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+        <style>
+            label {
+                margin: 0 20px 10px 0;
+                width: 150px;
+                text-align: right;
+                display: inline-block;
+            }
+
+            textarea {
+                margin: 0 0 10px 0;
+                width: 400px;
+                height: 100px;
+                vertical-align: top;
+                resize: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>活动记录</h1>
+        <h2>展示所有活动记录</h2>
+
+        // 欢歌GutHub内容
+        <form id="create-form" method="post" action="/api/event">
+            <label for="input-topic">主题</label>
+            <input id="input-topic" name="topic" />
+            <br />
+
+            <label for="input-organizer-id">组织人 ID</label>
+            <input id="input-organizer-id" name="organizerId" />
+            <br />
+
+            <label for="input-organizer-display-name">组织人显示昵称</label>
+            <input id="input-organizer-display-name" name="organizerDisplayName" />
+            <br />
+
+            <label for="input-description">描述</label>
+            <textarea id="input-description" name="description"></textarea>
+            <br />
+
+            <label for="input-time-range">活动时间</label>
+            <input id="input-time-range" name="timeRange" type="datetime-local" />
+
+            <br />
+            <input type="submit" value="创建" />
+            @* Convert HTML Form data to JSON *@
+            @*<input id="submit" type="button" value="创建" />*@
+        </form>
+
+        @*<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>*@
+        <script>
+        var submitButton = document.querySelector('#submit');
+        submitButton.onclick = function () {
+            var formObject = document.querySelector('#create-form');
+            var jsonObject = convertFormDataToJson(new FormData(formObject));
+            // ES6
+            fetch('/api/event',
+                {
+                    method: "POST",
+                    body: jsonObject,
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                }).then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    console.log(data);
+                    alert("提交成功！");
+                    window.location = "/home/index";
+                }).catch(function (ex) {
+                    console.log("Oops, error" + ex);
+                });
+            // jQuery
+            // http://www.w3school.com.cn/jquery/ajax_ajax.asp
+            //$.ajax({
+            //    url: "/api/event",
+            //    type: "POST",
+            //    contentType: "application/json",
+            //    dataType: "json",
+            //    data: $("#create-form").serialize(),
+            //    success: function (result) {
+            //        console.log(result);
+            //        alert("提交成功！");
+            //        window.location = "/home/index";
+            //    },
+            //    error: function(ex) {
+            //        console.log("Oops, error" + ex);
+            //    }
+            //});
+        }
+        var convertFormDataToJson = function (formData) {
+            var objData = {};
+            formData.forEach((value, key) => objData[key] = value);
+            return JSON.stringify(objData);
+        };
+        </script>
+
+
+
+
+
+
+        // 方式1 传统方式，在服务端进行，无WebAPI bug：using 引用失败
+        <table>
+            <thead>
+                <tr>
+                    <td>主题</td>
+                    <td>组织者</td>
+                    <td>简述</td>
+                    <td>活动时间</td>
+                    <td>参加者</td>
+                </tr>
+            </thead>
+            @* Razor *@
+            <tbody>
+
+                @{
+                    var eventRepo = new EventsRepositories();
+                    var allEvents = eventRepo.GetAll();
+                }
+                @foreach (var e in allEvents)
+                {
+                    <tr>
+                        <td>@e.Topic</td>
+                        <td>@e.OrganzerDisplayName</td>
+                        <td>@e.Description</td>
+                        <td>@e.TimeRange</td>
+                        <td>---</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        // 方式2 动态获取，在客户端进行
+        <input id="refresh-2" type="button" value="刷新-2" />
+        <table>
+            <thead>
+                <tr>
+                    <td>主题</td>
+                    <td>组织者</td>
+                    <td>简述</td>
+                    <td>活动时间</td>
+                    <td>参加者</td>
+                </tr>
+            </thead>
+
+            <tbody id="event-list"></tbody>
+        </table>
+
+        <script>
+            var refreshButton2 = document.querySelector('#refresh-2');
+            refreshButton2.onclick = function () {
+                debugger;
+                fetch('/api/events').then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    debugger;
+                    console.log(data);
+                    var participators = "";
+                    var html = "";
+                    data.forEach((d) => {
+                        d.checkInList.forEach((e) => {
+                            participators += (e.participatorDisplayName + "，");
+                        });
+                        html += '<tr><td>${d.topic}</td><td>${d.organizerDisplayName}</td><td>${d.decription}</td><td>${d.timeRange}</td><td>${d.participators}</td></tr>';
+                    });
+                    var evenList = document.querySelector('#event-list');
+                    eventList.innerHTML = html;
+                }).catch(function (e) {
+                    console.log("Oops,error" + e);
+                });
+            }
+
+        </script>
+
+    </body>
+</html>

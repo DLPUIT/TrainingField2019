@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressBar", "ProgressBar\ProgressBar.csproj", "{D906F99F-476E-449E-B1A4-59A8D1FB4289}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabControl", "..\TabControl\TabControl.csproj", "{8030696D-C992-43BD-81D1-2F87B021F57E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D906F99F-476E-449E-B1A4-59A8D1FB4289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D906F99F-476E-449E-B1A4-59A8D1FB4289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D906F99F-476E-449E-B1A4-59A8D1FB4289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D906F99F-476E-449E-B1A4-59A8D1FB4289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8030696D-C992-43BD-81D1-2F87B021F57E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8030696D-C992-43BD-81D1-2F87B021F57E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8030696D-C992-43BD-81D1-2F87B021F57E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8030696D-C992-43BD-81D1-2F87B021F57E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E1BF94C-D693-42C9-862E-439499B9D49A}
+	EndGlobalSection
+EndGlobal

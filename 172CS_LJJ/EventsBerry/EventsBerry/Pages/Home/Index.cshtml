@@ -1,0 +1,84 @@
+﻿@page
+@model EventsBerry.Pages.Home.IndexModel
+@{
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            td {
+                border: 1px solid #333333;
+            }
+        </style>       
+    </head>
+    <body>
+        <h1>活动记录</h1>
+        <h2>展示所有活动记录</h2>
+        <input id="refresh1" type="button" value="刷新1" />
+        <table>
+            <thead>
+                <tr>
+                    <td>主题</td>
+                    <td>组织者</td>
+                    <td>简述</td>
+                    <td>活动时间</td>
+                    <td>参加者</td>
+                </tr>
+            </thead>
+            <tbody>
+                @using EventsBerry.Repositories;
+                @{
+                    var eventRepo = new EventRepository();
+                    var allEvents = eventRepo.GetAll();
+                }
+                @foreach (var e in allEvents)
+                {
+                    <tr>
+                        <td>@e.Topic</td>
+                        <td>@e.OrganizerDisplayName</td>
+                        <td>@e.Description</td>
+                        <td>@e.TimeRange</td>
+                        <td>-----</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <input id="refresh2" type="button" value="刷新2" />
+        <table>
+            <thead>
+                <tr>
+                    <td>主题</td>
+                    <td>组织者</td>
+                    <td>简述</td>
+                    <td>活动时间</td>
+                    <td>参加者</td>
+                </tr>
+            </thead>
+            <tbody id="event-list"></tbody>
+        </table>
+        <script>
+            var refreshButton1 = document.querySelector("#refresh1");
+            refreshButton1.onclick = function () {
+                window.location.reload();
+            }
+            var refreshButton2 = document.querySelector("#refresh2");
+            refreshButton2.onclick = function () {
+                fetch("/api/Event").then(function (response) {
+                    return response.json();
+                }).then(function (data) {
+                    console.log(data);
+                    var html = "";
+                    data.forEach(d => {
+                        html += `<tr><td>${d.topic}</td><td>${d.organizerDisplayName}</td><td>${d.description}</td><td>${d.timeRange}</td><td>-----</td></tr>`;
+                        document.querySelector("#event-list").innerHTML = html;
+                    });                                    
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+            }
+        </script>
+    </body>
+</html>
